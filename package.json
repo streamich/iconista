@@ -1,0 +1,71 @@
+{
+  "name": "iconista",
+  "version": "0.0.1",
+  "description": "",
+  "author": {
+    "name": "streamich",
+    "url": "https://github.com/streamich"
+  },
+  "homepage": "https://github.com/streamich/iconista",
+  "repository": "streamich/iconista",
+  "license": "Unlicense",
+  "engines": {
+    "node": ">=6.9"
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "prettier": "prettier --ignore-path .gitignore --write 'src/**/*.{ts,tsx,js,jsx}'",
+    "prettier:diff": "prettier -l 'src/**/*.{ts,tsx,js,jsx}'",
+    "prepush": "yarn prettier:diff",
+    "precommit": "pretty-quick --staged && yarn tslint",
+    "tslint": "tslint 'src/**/*.{js,jsx,ts,tsx}' -t verbose",
+    "commitmsg": "commitlint -E GIT_PARAMS",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "test": "jest --no-cache --config='jest.config.js'",
+    "release": "semantic-release"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/git": "^7.0.8",
+    "@semantic-release/npm": "^5.1.4",
+    "@types/jest": "^24.0.11",
+    "husky": "^1.3.1",
+    "jest": "^24.5.0",
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0",
+    "rimraf": "^2.6.3",
+    "semantic-release": "^15.13.3",
+    "ts-jest": "^24.0.0",
+    "ts-node": "^8.0.3",
+    "tslint": "^5.14.0",
+    "tslint-config-common": "^1.6.0",
+    "typescript": "^3.3.3333"
+  },
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "release": {
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  }
+}
