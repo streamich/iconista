@@ -29,7 +29,7 @@ refs:
     - &Post_to_GitHub_Storybook_Artifacts_Link
       run:
         name: Post to GitHub Storybook Artifacts Link
-        command: npx commit-status success "Storybook" Latest "https://$CIRCLE_BUILD_NUM-$CIRCLE_WORKFLOW_ID-gh.circle-artifacts.com/0/root/repo/storybook-static/index.html"
+        command: npx commit-status success "Storybook" Latest "https://$CIRCLE_BUILD_NUM-175650538-gh.circle-artifacts.com/0/root/repo/storybook-static/index.html"
     - &Post_to_dev_null
       run:
         name: 'Post to Slack #dev-null'
