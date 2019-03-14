@@ -23,3 +23,8 @@ build_set_index:
 	@npx rimraf sets/index.*
 	@node -e 'fs.writeFileSync("sets/index.txt", fs.readdirSync("sets").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/index.json", JSON.stringify(fs.readFileSync("sets/index.txt", "utf8").split("\n"), null, 2))'
+
+.PHONY: build_types
+build_types:
+	@npx rimraf src/types.ts
+	@node scripts/build_types.js
