@@ -14,4 +14,10 @@ export type icons_${set} = '${iconList.join("' | '")}';
 `;
 }
 
+out += `
+export type Icon =
+  ${sets.map(set => `| {set: '${set}', icon: icons_${set}}`).join('\n  ')}
+  ;
+`;
+
 require('fs').writeFileSync('src/types.ts', out);

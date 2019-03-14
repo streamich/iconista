@@ -2,6 +2,8 @@
   "name": "iconista",
   "version": "0.0.1",
   "description": "",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
   "author": {
     "name": "streamich",
     "url": "https://github.com/streamich"
@@ -14,7 +16,8 @@
   },
   "main": "lib/index.js",
   "files": [
-    "lib/"
+    "lib/",
+    "sets/"
   ],
   "scripts": {
     "prettier": "prettier --ignore-path .gitignore --write 'src/**/*.{ts,tsx,js,jsx}'",
