@@ -86,3 +86,5 @@ typings/
 
 # Build folder
 lib/
+
+/tmp/
