@@ -1,6 +1,6 @@
 {
   "name": "iconista",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
@@ -55,8 +55,6 @@
     "tslint-config-common": "^1.6.0",
     "typescript": "^3.3.3333"
   },
-  "types": "lib/index.d.ts",
-  "typings": "lib/index.d.ts",
   "release": {
     "verifyConditions": [
       "@semantic-release/changelog",
