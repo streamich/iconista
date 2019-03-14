@@ -6,6 +6,7 @@ storiesOf('elastic', module)
   .add('alert', () => <Img set='elastic' icon='alert' />)
   .add('arrow_down', () => <Img set='elastic' icon='arrow_down' />)
   .add('branch', () => <Img set='elastic' icon='branch' />)
+  .add('brush', () => <Img set='elastic' icon='brush' />)
 
 storiesOf('ibm_16', module)
   .add('arrow--down', () => <Img set='ibm_16' icon='arrow--down' />)

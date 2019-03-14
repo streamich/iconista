@@ -2,9 +2,9 @@ import * as React from 'react';
 import {getUrl} from './getUrl';
 import {Icon} from './types';
 
-const Img: React.SFC<Icon> = (props) => {
+const Img: React.SFC<React.ImgHTMLAttributes<any> & Icon> = ({set, icon, ...rest}) => {
   return (
-    <img src={getUrl(props)} />
+    <img {...rest} src={getUrl({set, icon} as Icon)} />
   );
 };
 
