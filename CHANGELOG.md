@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/streamich/iconista/compare/v1.0.0...v1.1.0) (2019-03-14)
+
+
+### Features
+
+* 🎸 add elastic icons ([fe6dd00](https://github.com/streamich/iconista/commit/fe6dd00))
+* 🎸 allow adding custom props on <img> element ([89a5600](https://github.com/streamich/iconista/commit/89a5600))
+* 🎸 export React component as defualt, add stories ([afbbbce](https://github.com/streamich/iconista/commit/afbbbce))
+
 # 1.0.0 (2019-03-14)
 
 
