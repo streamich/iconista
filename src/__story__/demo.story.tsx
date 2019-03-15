@@ -6,7 +6,7 @@ import {rule} from 'p4-css';
 const className = rule({
   svg: {
     fill: 'tomato',
-  }
+  },
 });
 
 storiesOf('elastic', module)
@@ -39,4 +39,4 @@ storiesOf('Test', module)
         <Svg set="ibm_32" icon="download" x="10" />
       </div>
     );
-  })
+  });

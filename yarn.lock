@@ -2,6 +2,25 @@
 # yarn lockfile v1
 
 
+"@atlaskit/icon@^16.0.5":
+  version "16.0.5"
+  resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-16.0.5.tgz#21d23dbe9a1bc3d7dd064634375d177679070b3d"
+  integrity sha512-dwHIcvZ9tgy/kk/tHVr6aQvMkfYgVpXDt1t5XUvgZARXJ8+9OU6AhvMFQcNmd0SCpjVNJL1tNCADgm3j6/1EVA==
+  dependencies:
+    "@atlaskit/theme" "^8.0.1"
+    "@babel/runtime" "^7.0.0"
+    babel-runtime "^6.26.0"
+    uuid "^3.1.0"
+
+"@atlaskit/theme@^8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@atlaskit/theme/-/theme-8.0.1.tgz#aa474bed386963203d5e384806fe1a5cf732a533"
+  integrity sha512-3u4SmjP0+E5sRft264/DgHVxafmmDRvJ9JY6rAoCRLIB0i6DmFiQGW4dgZm1HRMlk3WX93aTY1WV0dGIWfxHIw==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    exenv "^1.2.2"
+    prop-types "^15.5.10"
+
 "@babel/code-frame@7.0.0", "@babel/code-frame@^7.0.0":
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.0.0.tgz#06e2ab19bdb535385559aabb5ba59729482800f8"
@@ -5264,7 +5283,7 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-exenv@^1.2.0:
+exenv@^1.2.0, exenv@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
   integrity sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=

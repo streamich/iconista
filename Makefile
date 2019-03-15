@@ -28,6 +28,16 @@ elastic:
 	@node -e 'fs.writeFileSync("sets/elastic/index.txt", fs.readdirSync("sets/elastic").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/elastic/index.json", JSON.stringify(fs.readFileSync("sets/elastic/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: atlaskit
+atlaskit:
+	@npx rimraf tmp/atlaskit sets/atlaskit
+	@npx mkdirp tmp/atlaskit sets/atlaskit
+	@find node_modules/@atlaskit/icon/svgs -maxdepth 1 -type f | xargs -I {} cp {} tmp/atlaskit
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/atlaskit/*.svg
+	@cp tmp/atlaskit/* sets/atlaskit
+	@node -e 'fs.writeFileSync("sets/atlaskit/index.txt", fs.readdirSync("sets/atlaskit").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/atlaskit/index.json", JSON.stringify(fs.readFileSync("sets/atlaskit/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
