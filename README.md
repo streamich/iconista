@@ -1,7 +1,7 @@
 # iconista
 
 - Hundreds of SVG icons in one React component
-- Only [0.2Kb](https://bundlephobia.com/result?p=iconista@1.0.0)
+- Just [one line of code](https://github.com/streamich/iconista/blob/master/src/index.tsx)
 - TypeScript autocompletion for icon sets and icons
 
 React usage:
