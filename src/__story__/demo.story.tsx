@@ -1,19 +1,35 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
-import {Img} from '..';
+import {Svg} from '..';
+import {rule} from 'p4-css';
+
+const className = rule({
+  svg: {
+    fill: 'tomato',
+  }
+});
 
 storiesOf('elastic', module)
-  .add('alert', () => <Img set="elastic" icon="alert" />)
-  .add('arrow_down', () => <Img set="elastic" icon="arrow_down" />)
-  .add('branch', () => <Img set="elastic" icon="branch" />)
-  .add('brush', () => <Img set="elastic" icon="brush" />);
+  .add('alert', () => <Svg set="elastic" icon="alert" />)
+  .add('arrow_down', () => <Svg set="elastic" icon="arrow_down" />)
+  .add('branch', () => <Svg set="elastic" icon="branch" />)
+  .add('brush', () => <Svg set="elastic" icon="brush" />);
 
 storiesOf('ibm_16', module)
-  .add('arrow--down', () => <Img set="ibm_16" icon="arrow--down" />)
-  .add('download', () => <Img set="ibm_16" icon="download" />)
-  .add('menu', () => <Img set="ibm_16" icon="menu" />);
+  .add('arrow--down', () => <Svg set="ibm_16" icon="arrow--down" />)
+  .add('download', () => <Svg set="ibm_16" icon="download" />)
+  .add('menu', () => <Svg set="ibm_16" icon="menu" />);
 
 storiesOf('ibm_32', module)
-  .add('download', () => <Img set="ibm_32" icon="download" />)
-  .add('draggable', () => <Img set="ibm_32" icon="draggable" />)
-  .add('move', () => <Img set="ibm_32" icon="move" />);
+  .add('download', () => <Svg set="ibm_32" icon="download" />)
+  .add('draggable', () => <Svg set="ibm_32" icon="draggable" />)
+  .add('move', () => <Svg set="ibm_32" icon="move" />);
+
+storiesOf('Color', module)
+  .add('tomato', () => {
+    return (
+      <div className={className}>
+        <Svg set="ibm_32" icon="download" />
+      </div>
+    );
+  })
