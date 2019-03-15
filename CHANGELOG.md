@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/streamich/iconista/compare/v2.0.0...v2.1.0) (2019-03-15)
+
+
+### Features
+
+* 🎸 add Atlaskit icons ([4e12dfa](https://github.com/streamich/iconista/commit/4e12dfa))
+
 # [2.0.0](https://github.com/streamich/iconista/compare/v1.1.1...v2.0.0) (2019-03-15)
 
 
