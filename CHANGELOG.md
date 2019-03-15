@@ -1,3 +1,18 @@
+# [2.0.0](https://github.com/streamich/iconista/compare/v1.1.1...v2.0.0) (2019-03-15)
+
+
+### Features
+
+* 🎸 allow to add custom attributes on <svg> element ([a601562](https://github.com/streamich/iconista/commit/a601562))
+* 🎸 create <Svg> component that loads SVG inline ([72cf2e3](https://github.com/streamich/iconista/commit/72cf2e3))
+* 🎸 simplify and improve error handling ([5cf2400](https://github.com/streamich/iconista/commit/5cf2400))
+* 🎸 update major in CDN URL ([cdea736](https://github.com/streamich/iconista/commit/cdea736))
+
+
+### BREAKING CHANGES
+
+* <Img> component is now replaced by <Svg>
+
 ## [1.1.1](https://github.com/streamich/iconista/compare/v1.1.0...v1.1.1) (2019-03-15)
 
 
