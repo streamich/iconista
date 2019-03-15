@@ -1,15 +1,18 @@
 # iconista
 
 - Hundreds of SVG icons in one React component
-- Only [0.2Kb](https://bundlephobia.com/result?p=iconista@1.0.0)
+- Just [one line of code](https://github.com/streamich/iconista/blob/master/src/index.tsx)
 - TypeScript autocompletion for icon sets and icons
+- [See available icons](./sets)
+
+![](./docs/icon.gif)
 
 React usage:
 
 ```js
-import Icon from 'iconista';
+import Img from 'iconista';
 
-<Icon set='ibm_16' icon='arrow--down' />
+<Img set='ibm_16' icon='arrow--down' />
 ```
 
 Or, simply get the icon URL:
