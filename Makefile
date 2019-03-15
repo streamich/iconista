@@ -37,6 +37,7 @@ atlaskit:
 	@cp tmp/atlaskit/* sets/atlaskit
 	@node -e 'fs.writeFileSync("sets/atlaskit/index.txt", fs.readdirSync("sets/atlaskit").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/atlaskit/index.json", JSON.stringify(fs.readFileSync("sets/atlaskit/index.txt", "utf8").split("\n"), null, 2))'
+	@node scripts/atlaskit_add_xmlns.js
 
 .PHONY: build_set_index
 build_set_index:
