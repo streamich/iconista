@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/streamich/iconista/compare/v1.1.0...v1.1.1) (2019-03-15)
+
+
+### Bug Fixes
+
+* 🐛 use version major in URL ([f2ec28d](https://github.com/streamich/iconista/commit/f2ec28d))
+
 # [1.1.0](https://github.com/streamich/iconista/compare/v1.0.0...v1.1.0) (2019-03-14)
 
 
