@@ -3,6 +3,7 @@
 - Hundreds of SVG icons in one React component
 - Just [one line of code](https://github.com/streamich/iconista/blob/master/src/index.tsx)
 - TypeScript autocompletion for icon sets and icons
+- [See available icons](./sets)
 
 ![](./docs/icon.gif)
 
