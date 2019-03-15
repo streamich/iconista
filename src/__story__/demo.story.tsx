@@ -25,11 +25,18 @@ storiesOf('ibm_32', module)
   .add('draggable', () => <Svg set="ibm_32" icon="draggable" />)
   .add('move', () => <Svg set="ibm_32" icon="move" />);
 
-storiesOf('Color', module)
-  .add('tomato', () => {
+storiesOf('Test', module)
+  .add('can apply fill color', () => {
     return (
       <div className={className}>
         <Svg set="ibm_32" icon="download" />
+      </div>
+    );
+  })
+  .add('can add attributes [x="10"]', () => {
+    return (
+      <div className={className}>
+        <Svg set="ibm_32" icon="download" x="10" />
       </div>
     );
   })

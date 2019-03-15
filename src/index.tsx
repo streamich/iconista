@@ -5,13 +5,13 @@ import useRefMounted from 'react-use/lib/useRefMounted';
 
 const {useEffect, useState, useRef} = React;
 
-const Svg: React.FunctionComponent<Icon> = (props) => {
+const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, icon, ...rest}) => {
   const ref = useRef<SVGSVGElement | null>(null);
   const refMounted = useRefMounted();
   const [error, setError] = useState<Error | undefined>();
 
   useEffect(() => {
-    const url = getUrl(props);
+    const url = getUrl({set, icon} as Icon);
     const req = new XMLHttpRequest();
     req.onreadystatechange = () => {
       if (!refMounted.current) return;
@@ -36,14 +36,14 @@ const Svg: React.FunctionComponent<Icon> = (props) => {
     };
     req.open('GET', url, true);
     req.send();
-  }, [props.set, props.icon]);
+  }, [set, icon]);
 
   if (error) {
-    const url = getUrl(props);
+    const url = getUrl({set, icon} as Icon);
     return <img src={url} title={error.message} />;
   }
 
-  return <svg ref={ref} />;
+  return <svg ref={ref} {...rest} />;
 };
 
 export {getUrl, Svg};
