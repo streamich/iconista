@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/streamich/iconista/compare/v2.1.0...v2.2.0) (2019-03-15)
+
+
+### Features
+
+* 🎸 add XMLNS namespace to Atlaskit icons ([1dfbe9b](https://github.com/streamich/iconista/commit/1dfbe9b))
+
 # [2.1.0](https://github.com/streamich/iconista/compare/v2.0.0...v2.1.0) (2019-03-15)
 
 
