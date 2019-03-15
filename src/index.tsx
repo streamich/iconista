@@ -19,10 +19,8 @@ const loadSvg = (url: string): Promise<Document> => {
           } else {
             reject(new Error(`Could not load SVG Document: ${url}`));
           }
-        } else if (status >= 400) { // request status is error (4xx or 5xx)
+        } else {
           reject(new Error(`SVG loading HTTP ${status} error: ${url}`));
-        } else if (status === 0) { // request status 0 can indicate a failed cross-domain call
-          reject(new Error(`Could not load SVG cross domain: ${url}`));
         }
       }
     };
