@@ -4,12 +4,14 @@
 - Just [one line of code](https://github.com/streamich/iconista/blob/master/src/index.tsx)
 - TypeScript autocompletion for icon sets and icons
 
+![](./docs/icon.gif)
+
 React usage:
 
 ```js
-import Icon from 'iconista';
+import Img from 'iconista';
 
-<Icon set='ibm_16' icon='arrow--down' />
+<Img set='ibm_16' icon='arrow--down' />
 ```
 
 Or, simply get the icon URL:

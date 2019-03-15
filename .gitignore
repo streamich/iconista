@@ -88,3 +88,4 @@ typings/
 lib/
 
 /tmp/
+.DS_Store
