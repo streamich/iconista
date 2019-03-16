@@ -4,6 +4,7 @@ import {Icon} from './types';
 import useRefMounted from 'react-use/lib/useRefMounted';
 
 const {useEffect, useState, useRef} = React;
+const cache: {[key: string]: Document} = {};
 
 const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, icon, ...rest}) => {
   const ref = useRef<SVGSVGElement | null>(null);
@@ -11,22 +12,16 @@ const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, ico
   const [error, setError] = useState<Error | undefined>();
 
   useEffect(() => {
-    const url = getUrl({set, icon} as Icon);
-    const req = new XMLHttpRequest();
-    req.onreadystatechange = () => {
-      if (!refMounted.current) return;
-      const {readyState, status, responseXML: doc} = req;
-      if (readyState !== 4) return;
-      if (status !== 200) return setError(new Error(`SVG loading HTTP ${status} error: ${url}`));
-      if (!doc!) return setError(new Error(`Could not load SVG Document: ${url}`));
-
+    const applyDoc = (doc: Document) => {
       const el = ref.current;
       if (!el) return;
 
       const svg = doc!.getRootNode().childNodes[0] as SVGSVGElement;
+      const {childNodes} = svg;
 
       // Set SVG child nodes.
-      while (svg.childNodes.length > 0) el.appendChild(svg.childNodes[0]);
+      for (let i = 0; i < childNodes.length; i++)
+        el.appendChild(childNodes[i].cloneNode(true));
 
       // Set SVG attributes.
       for (let i = 0; i < svg.attributes.length; i++) {
@@ -34,8 +29,23 @@ const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, ico
         el.setAttribute(name, value);
       }
     };
-    req.open('GET', url, true);
-    req.send();
+
+    const key = `${set}:${icon}`;
+    if (cache[key]) applyDoc(cache[key]);
+    else {
+      const url = getUrl({set, icon} as Icon);
+      const req = new XMLHttpRequest();
+      req.onreadystatechange = () => {
+        if (!refMounted.current) return;
+        const {readyState, status, responseXML: doc} = req;
+        if (readyState !== 4) return;
+        if (status !== 200) return setError(new Error(`SVG loading HTTP ${status} error: ${url}`));
+        if (!doc!) return setError(new Error(`Could not load SVG Document: ${url}`));
+        applyDoc(cache[key] = doc!);
+      };
+      req.open('GET', url, true);
+      req.send();
+    }
   }, [set, icon]);
 
   if (error) {
