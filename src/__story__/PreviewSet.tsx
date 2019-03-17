@@ -3,6 +3,8 @@ import {Icon} from '../types';
 import Svg from '..';
 import Tooltip from '@material-ui/core/Tooltip';
 import {HoverSensor} from 'libreact/lib/HoverSensor';
+import copy from 'copy-to-clipboard';
+import {SnackbarProvider, withSnackbar} from 'notistack';
 
 const styles = {
   set: {
@@ -13,7 +15,7 @@ const styles = {
   } as React.CSSProperties,
 };
 
-const PreviewIcon: React.FC<Icon & {size?: number}> = ({set, icon, size = 24}) => {
+const PreviewIcon: React.FC<Icon & {size?: number, enqueueSnackbar: (text: any) => void}> = ({set, icon, size = 24, enqueueSnackbar}) => {
   const styles: {[name: string]: React.CSSProperties} = {
     block: {
       float: 'left',
@@ -26,6 +28,7 @@ const PreviewIcon: React.FC<Icon & {size?: number}> = ({set, icon, size = 24}) =
       textAlign: 'center',
       boxSizing: 'border-box',
       margin: `${size * .2}px`,
+      cursor: 'pointer',
     },
     svg: {
       width: size,
@@ -33,9 +36,19 @@ const PreviewIcon: React.FC<Icon & {size?: number}> = ({set, icon, size = 24}) =
     },
   };
 
+  const onClick = () => {
+    const text = `<Svg set="${set}" icon="${icon}" />`;
+    copy(text);
+    enqueueSnackbar(
+      <div style={{textAlign: 'center', width: '300px'}}>
+        Copied <code style={{fontSize: '14px', color: '#EC5785'}}>{icon}</code>
+      </div>
+    );
+  };
+
   return (
     <HoverSensor>{({isHover}) =>
-      <div style={{...styles.block, border: `1px solid rgba(0,0,0,.${isHover ? 2 : 1})`}}>
+      <div style={{...styles.block, border: `1px solid rgba(0,0,0,.${isHover ? 2 : 1})`}} onClick={onClick}>
         <Tooltip title={icon} placement="top">
           <Svg style={styles.svg} set={set as any} icon={icon as any} />
         </Tooltip>
@@ -44,6 +57,8 @@ const PreviewIcon: React.FC<Icon & {size?: number}> = ({set, icon, size = 24}) =
   );
 };
 
+const PreviewIconWithSnackbar = withSnackbar(PreviewIcon as any) as any;
+
 export interface PreviewSetProps {
   set: string;
   icons: string[];
@@ -51,9 +66,11 @@ export interface PreviewSetProps {
 
 const PreviewSet: React.FC<PreviewSetProps> = ({set, icons}) => {
   return (
-    <div style={styles.set}>
-      {icons.map(icon => <PreviewIcon set={set as any} icon={icon as any} />)}
-    </div>
+    <SnackbarProvider maxSnack={3} transitionDuration={{exit: 300, enter: 150}} anchorOrigin={{horizontal: 'center', vertical: 'top'}}>
+      <div style={styles.set}>
+        {icons.map(icon => <PreviewIconWithSnackbar set={set as any} icon={icon as any} />)}
+      </div>
+    </SnackbarProvider>
   );
 };
 
