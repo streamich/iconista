@@ -44,6 +44,7 @@
     "react-dom": "*"
   },
   "devDependencies": {
+    "@ant-design/icons": "^1.2.1",
     "@atlaskit/icon": "^16.0.5",
     "@babel/core": "^7.3.4",
     "@carbon/icons": "^0.0.1-alpha.12",

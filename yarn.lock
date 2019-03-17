@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@ant-design/icons@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@ant-design/icons/-/icons-1.2.1.tgz#8e19301b1433ec67d6bbd0e892782e2ade561ff9"
+  integrity sha512-gQx3nH6m1xvebOWh5xibhzVK02aoqHY7JUXUS4doAidSDRWsj5iwKC8Gq9DemDZ4T+bW6xO7jJZN1UsbvcW7Uw==
+
 "@atlaskit/icon@^16.0.5":
   version "16.0.5"
   resolved "https://registry.yarnpkg.com/@atlaskit/icon/-/icon-16.0.5.tgz#21d23dbe9a1bc3d7dd064634375d177679070b3d"
