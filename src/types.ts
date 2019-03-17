@@ -1702,10 +1702,10 @@ export type icons_ibm_32 =
   | 'zoom--out';
 
 export type Icon =
-  | {set: 'ant_fill'; icon: icons_ant_fill}
-  | {set: 'ant_outline'; icon: icons_ant_outline}
-  | {set: 'ant_twotone'; icon: icons_ant_twotone}
-  | {set: 'atlaskit'; icon: icons_atlaskit}
-  | {set: 'elastic'; icon: icons_elastic}
-  | {set: 'ibm_16'; icon: icons_ibm_16}
-  | {set: 'ibm_32'; icon: icons_ibm_32};
+  | {set: 'ant_fill'; icon: icons_ant_fill; version?: string}
+  | {set: 'ant_outline'; icon: icons_ant_outline; version?: string}
+  | {set: 'ant_twotone'; icon: icons_ant_twotone; version?: string}
+  | {set: 'atlaskit'; icon: icons_atlaskit; version?: string}
+  | {set: 'elastic'; icon: icons_elastic; version?: string}
+  | {set: 'ibm_16'; icon: icons_ibm_16; version?: string}
+  | {set: 'ibm_32'; icon: icons_ibm_32; version?: string};
