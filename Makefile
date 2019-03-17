@@ -39,6 +39,36 @@ atlaskit:
 	@node -e 'fs.writeFileSync("sets/atlaskit/index.json", JSON.stringify(fs.readFileSync("sets/atlaskit/index.txt", "utf8").split("\n"), null, 2))'
 	@node scripts/atlaskit_add_xmlns.js
 
+.PHONY: ant_outline
+ant_outline:
+	@npx rimraf tmp/ant_outline sets/ant_outline
+	@npx mkdirp tmp/ant_outline sets/ant_outline
+	@find node_modules/@ant-design/icons/svg/outline -maxdepth 1 -type f | xargs -I {} cp {} tmp/ant_outline
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/ant_outline/*.svg
+	@cp tmp/ant_outline/* sets/ant_outline
+	@node -e 'fs.writeFileSync("sets/ant_outline/index.txt", fs.readdirSync("sets/ant_outline").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/ant_outline/index.json", JSON.stringify(fs.readFileSync("sets/ant_outline/index.txt", "utf8").split("\n"), null, 2))'
+
+.PHONY: ant_fill
+ant_fill:
+	@npx rimraf tmp/ant_fill sets/ant_fill
+	@npx mkdirp tmp/ant_fill sets/ant_fill
+	@find node_modules/@ant-design/icons/svg/fill -maxdepth 1 -type f | xargs -I {} cp {} tmp/ant_fill
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/ant_fill/*.svg
+	@cp tmp/ant_fill/* sets/ant_fill
+	@node -e 'fs.writeFileSync("sets/ant_fill/index.txt", fs.readdirSync("sets/ant_fill").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/ant_fill/index.json", JSON.stringify(fs.readFileSync("sets/ant_fill/index.txt", "utf8").split("\n"), null, 2))'
+
+.PHONY: ant_twotone
+ant_twotone:
+	@npx rimraf tmp/ant_twotone sets/ant_twotone
+	@npx mkdirp tmp/ant_twotone sets/ant_twotone
+	@find node_modules/@ant-design/icons/svg/twotone -maxdepth 1 -type f | xargs -I {} cp {} tmp/ant_twotone
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/ant_twotone/*.svg
+	@cp tmp/ant_twotone/* sets/ant_twotone
+	@node -e 'fs.writeFileSync("sets/ant_twotone/index.txt", fs.readdirSync("sets/ant_twotone").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/ant_twotone/index.json", JSON.stringify(fs.readFileSync("sets/ant_twotone/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*

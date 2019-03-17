@@ -20,8 +20,7 @@ const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, ico
       const {childNodes} = svg;
 
       // Set SVG child nodes.
-      for (let i = 0; i < childNodes.length; i++)
-        el.appendChild(childNodes[i].cloneNode(true));
+      for (let i = 0; i < childNodes.length; i++) el.appendChild(childNodes[i].cloneNode(true));
 
       // Set SVG attributes.
       for (let i = 0; i < svg.attributes.length; i++) {
@@ -41,7 +40,7 @@ const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, ico
         if (readyState !== 4) return;
         if (status !== 200) return setError(new Error(`SVG loading HTTP ${status} error: ${url}`));
         if (!doc!) return setError(new Error(`Could not load SVG Document: ${url}`));
-        applyDoc(cache[key] = doc!);
+        applyDoc((cache[key] = doc!));
       };
       req.open('GET', url, true);
       req.send();

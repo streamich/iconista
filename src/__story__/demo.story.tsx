@@ -25,8 +25,7 @@ storiesOf('ibm_32', module)
   .add('draggable', () => <Svg set="ibm_32" icon="draggable" />)
   .add('move', () => <Svg set="ibm_32" icon="move" />);
 
-storiesOf('atlaskit', module)
-  .add('dropbox', () => <Svg set="atlaskit" icon="dropbox" />)
+storiesOf('atlaskit', module).add('dropbox', () => <Svg set="atlaskit" icon="dropbox" />);
 
 storiesOf('Test', module)
   .add('can apply fill color', () => {
