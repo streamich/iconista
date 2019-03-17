@@ -1,3 +1,11 @@
+# [2.5.0](https://github.com/streamich/iconista/compare/v2.4.0...v2.5.0) (2019-03-17)
+
+
+### Features
+
+* 🎸 add clipboard copy and snackbar ([35e0b3c](https://github.com/streamich/iconista/commit/35e0b3c))
+* 🎸 allow to specify NPM version in icon ([8a05691](https://github.com/streamich/iconista/commit/8a05691))
+
 # [2.4.0](https://github.com/streamich/iconista/compare/v2.3.0...v2.4.0) (2019-03-17)
 
 
