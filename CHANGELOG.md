@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/streamich/iconista/compare/v2.3.0...v2.4.0) (2019-03-17)
+
+
+### Features
+
+* 🎸 add ant-design icons ([8d8b4bf](https://github.com/streamich/iconista/commit/8d8b4bf))
+
 # [2.3.0](https://github.com/streamich/iconista/compare/v2.2.0...v2.3.0) (2019-03-16)
 
 
