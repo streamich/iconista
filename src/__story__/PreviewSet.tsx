@@ -15,7 +15,12 @@ const styles = {
   } as React.CSSProperties,
 };
 
-const PreviewIcon: React.FC<Icon & {size?: number, enqueueSnackbar: (text: any) => void}> = ({set, icon, size = 24, enqueueSnackbar}) => {
+const PreviewIcon: React.FC<Icon & {size?: number; enqueueSnackbar: (text: any) => void}> = ({
+  set,
+  icon,
+  size = 24,
+  enqueueSnackbar,
+}) => {
   const styles: {[name: string]: React.CSSProperties} = {
     block: {
       float: 'left',
@@ -24,10 +29,10 @@ const PreviewIcon: React.FC<Icon & {size?: number, enqueueSnackbar: (text: any) 
       alignItems: 'center',
       width: size * 1.62,
       height: size * 1.62,
-      borderRadius: `${size * .16}px`,
+      borderRadius: `${size * 0.16}px`,
       textAlign: 'center',
       boxSizing: 'border-box',
-      margin: `${size * .2}px`,
+      margin: `${size * 0.2}px`,
       cursor: 'pointer',
     },
     svg: {
@@ -42,18 +47,20 @@ const PreviewIcon: React.FC<Icon & {size?: number, enqueueSnackbar: (text: any) 
     enqueueSnackbar(
       <div style={{textAlign: 'center', width: '300px'}}>
         Copied <code style={{fontSize: '14px', color: '#EC5785'}}>{icon}</code>
-      </div>
+      </div>,
     );
   };
 
   return (
-    <HoverSensor>{({isHover}) =>
-      <div style={{...styles.block, border: `1px solid rgba(0,0,0,.${isHover ? 2 : 1})`}} onClick={onClick}>
-        <Tooltip title={icon} placement="top">
-          <Svg style={styles.svg} set={set as any} icon={icon as any} />
-        </Tooltip>
-      </div>
-    }</HoverSensor>
+    <HoverSensor>
+      {({isHover}) => (
+        <div style={{...styles.block, border: `1px solid rgba(0,0,0,.${isHover ? 2 : 1})`}} onClick={onClick}>
+          <Tooltip title={icon} placement="top">
+            <Svg style={styles.svg} set={set as any} icon={icon as any} />
+          </Tooltip>
+        </div>
+      )}
+    </HoverSensor>
   );
 };
 
@@ -66,9 +73,15 @@ export interface PreviewSetProps {
 
 const PreviewSet: React.FC<PreviewSetProps> = ({set, icons}) => {
   return (
-    <SnackbarProvider maxSnack={3} transitionDuration={{exit: 300, enter: 150}} anchorOrigin={{horizontal: 'center', vertical: 'top'}}>
+    <SnackbarProvider
+      maxSnack={3}
+      transitionDuration={{exit: 300, enter: 150}}
+      anchorOrigin={{horizontal: 'center', vertical: 'top'}}
+    >
       <div style={styles.set}>
-        {icons.map(icon => <PreviewIconWithSnackbar set={set as any} icon={icon as any} />)}
+        {icons.map((icon) => (
+          <PreviewIconWithSnackbar set={set as any} icon={icon as any} />
+        ))}
       </div>
     </SnackbarProvider>
   );

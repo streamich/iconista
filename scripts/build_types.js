@@ -16,7 +16,7 @@ export type icons_${set} = '${iconList.join("' | '")}';
 
 out += `
 export type Icon =
-  ${sets.map(set => `| {set: '${set}', icon: icons_${set}}`).join('\n  ')}
+  ${sets.map(set => `| {set: '${set}', icon: icons_${set}, version?: string}`).join('\n  ')}
   ;
 `;
 
