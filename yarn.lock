@@ -5372,7 +5372,7 @@ execa@^1.0.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-exenv@^1.2.0, exenv@^1.2.2:
+exenv@^1.2.0, exenv@^1.2.1, exenv@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
   integrity sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=
@@ -5496,10 +5496,29 @@ extsprintf@^1.2.0:
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
 
+fast-af@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/fast-af/-/fast-af-0.1.0.tgz#1a1e7993e4fd7b370266c484b59325c25507d14a"
+  integrity sha1-Gh55k+T9ezcCZsSEtZMlwlUH0Uo=
+  dependencies:
+    fast-deep-equal "^1.0.0"
+    fast-extend "^1.0.2"
+    fast-shallow-equal "^0.1.1"
+
+fast-deep-equal@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-1.1.0.tgz#c053477817c86b51daa853c81e059b733d023614"
+  integrity sha1-wFNHeBfIa1HaqFPIHgWbcz0CNhQ=
+
 fast-deep-equal@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz#7b05218ddf9667bf7f370bf7fdb2cb15fdd0aa49"
   integrity sha1-ewUhjd+WZ79/Nwv3/bLLFf3Qqkk=
+
+fast-extend@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/fast-extend/-/fast-extend-1.0.2.tgz#3b8a5b09cbc8ff3d6d47eaf397398c0a643e441b"
+  integrity sha512-XXA9RmlPatkFKUzqVZAFth18R4Wo+Xug/S+C7YlYA3xrXwfPlW3dqNwOb4hvQo7wZJ2cNDYhrYuPzVOfHy5/uQ==
 
 fast-glob@^2.0.2, fast-glob@^2.2.6:
   version "2.2.6"
@@ -5522,6 +5541,11 @@ fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
   integrity sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=
+
+fast-shallow-equal@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/fast-shallow-equal/-/fast-shallow-equal-0.1.1.tgz#44d01324d7fd31e00a67bb02b9396e283d526c22"
+  integrity sha512-XVP6nhaXLYOH6JZCWBcNaeEer9GJ5/8cJWUP+OLmgwWgEkJp5Kpl/fdpJ01zl0mpLxrk7f5J3hIv+GmjTCi7Mg==
 
 fastest-stable-stringify@^1.0.1:
   version "1.0.1"
@@ -5554,7 +5578,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
-fbjs@^0.8.0, fbjs@^0.8.1:
+fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.9:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -5688,6 +5712,11 @@ flush-write-stream@^1.0.0:
   dependencies:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
+
+focus-lock@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-0.1.0.tgz#1477dcb646e158eb538d6b81b17b7866222b6de1"
+  integrity sha512-jLyNZEg2u0LTVc4/GPAx+M7i01gw7wJCCjIrtEWqanjfxwZBAkytGd0D1+p8vVK65FKT67/i5n42DBZDdEFwCQ==
 
 focus-lock@^0.6.0:
   version "0.6.2"
@@ -7865,6 +7894,20 @@ libnpx@^10.2.0:
     y18n "^4.0.0"
     yargs "^11.0.0"
 
+libreact@^2.12.2:
+  version "2.12.2"
+  resolved "https://registry.yarnpkg.com/libreact/-/libreact-2.12.2.tgz#e320b71207c454209ea61d8ffb09ae86f4d60877"
+  integrity sha512-RuHI3LSl9omKN9gtSJ/Ty9LDm17BwTvBAhZFeCmCc67292IrWGlp1JYTbfoY1Xj335ISYxA2mvYmfhvkHOHcFw==
+  dependencies:
+    fast-af "^0.1.0"
+    nano-css "^1.13.0"
+    opencollective-postinstall "^2.0.1"
+    react-focus-lock "1.6.5"
+    react-universal-interface "^0.3.1"
+    screenfull "^3.3.2"
+    throttle-debounce "^2.0.1"
+    tslib "^1.9.0"
+
 load-json-file@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/load-json-file/-/load-json-file-4.0.0.tgz#2f5f45ab91e33216234fd53adab668eb4ec0993b"
@@ -8077,7 +8120,7 @@ lodash@4.17.11, lodash@>4.17.4, lodash@^4.0.1, lodash@^4.17.10, lodash@^4.17.11,
   resolved "https://registry.yarnpkg.com/@elastic/lodash/-/lodash-3.10.1-kibana1.tgz#9baa52c296ec06a52461f8516bb94172ef53a7fe"
   integrity sha512-JIL1V6Kd9mhm7OCO5nmpMF8hW2iw1godcXgBikhIlTvsu6hBA8Xnxfc/AukdysTfJo4zWaZ8PzlJX/hKN/DlDA==
 
-loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3.0, loose-envify@^1.4.0:
+loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.2.0, loose-envify@^1.3.0, loose-envify@^1.3.1, loose-envify@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
@@ -8635,6 +8678,17 @@ nan@^2.9.2:
   version "2.13.0"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.13.0.tgz#7bdfc27dd3c060c46e60b62c72b74012d1a4cd68"
   integrity sha512-5DDQvN0luhXdut8SCwzm/ZuAX2W+fwhqNzfq7CZ+OJzQ6NwpcqmIGyLD1R8MEt7BeErzcsI0JLr4pND2pNp2Cw==
+
+nano-css@^1.13.0:
+  version "1.17.2"
+  resolved "https://registry.yarnpkg.com/nano-css/-/nano-css-1.17.2.tgz#1fe63d1ed9c4b4223b13d3afc48756e67a7f619a"
+  integrity sha512-Px0Pm3UqzPDGSPF90Rp3nBkEt3dT45oDRaEJXupeNsTiWxCFEm7Lhwhb5hM2UfgSYPZ3lvXt2bwolsEliejc9g==
+  dependencies:
+    css-tree "^1.0.0-alpha.28"
+    fastest-stable-stringify "^1.0.1"
+    inline-style-prefixer "^4.0.0"
+    rtl-css-js "^1.9.0"
+    stylis "3.5.0"
 
 nano-css@^3.4.0, nano-css@^3.5.0:
   version "3.5.0"
@@ -9321,6 +9375,11 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
+opencollective-postinstall@^2.0.1:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/opencollective-postinstall/-/opencollective-postinstall-2.0.2.tgz#5657f1bede69b6e33a45939b061eb53d3c6c3a89"
+  integrity sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==
+
 opener@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/opener/-/opener-1.5.1.tgz#6d2f0e77f1a0af0032aca716c2c1fbb8e7e8abed"
@@ -9968,6 +10027,14 @@ promzard@^0.3.0:
   dependencies:
     read "1"
 
+prop-types@15.5.10:
+  version "15.5.10"
+  resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
+  integrity sha1-J5ffwxJhguOpXj37suiT3ddFYVQ=
+  dependencies:
+    fbjs "^0.8.9"
+    loose-envify "^1.3.1"
+
 prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
@@ -10294,6 +10361,15 @@ react-fast-compare@^2.0.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
+react-focus-lock@1.6.5:
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-1.6.5.tgz#599be7854253d3cf082d882ef617fb13fd88ddac"
+  integrity sha512-wkevTtsTUoXaNEYMdF1hB0zwJF68qZIR2aC0kHPrT0Z1eDVhGE+GDouVMqwKef2Xp7zLzu/lID4ELZ8+A5IXmQ==
+  dependencies:
+    focus-lock "^0.1.0"
+    prop-types "15.5.10"
+    react-side-effect "^1.1.3"
+
 react-focus-lock@^1.17.7:
   version "1.18.3"
   resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-1.18.3.tgz#19d84afeab935c0b5de196922f71db7c481baba4"
@@ -10414,6 +10490,14 @@ react-select@^2.3.0:
     react-input-autosize "^2.2.1"
     react-transition-group "^2.2.1"
 
+react-side-effect@^1.1.3:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.1.5.tgz#f26059e50ed9c626d91d661b9f3c8bb38cd0ff2d"
+  integrity sha512-Z2ZJE4p/jIfvUpiUMRydEVpQRf2f8GMHczT6qLcARmX7QRb28JDBTpnM2g/i5y/p7ZDEXYGHWg0RbhikE+hJRw==
+  dependencies:
+    exenv "^1.2.1"
+    shallowequal "^1.0.1"
+
 react-syntax-highlighter@^8.0.1:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/react-syntax-highlighter/-/react-syntax-highlighter-8.1.0.tgz#59103ff17a828a27ed7c8f035ae2558f09b6b78c"
@@ -10442,6 +10526,11 @@ react-transition-group@^2.2.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
+
+react-universal-interface@^0.3.1:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/react-universal-interface/-/react-universal-interface-0.3.2.tgz#bf80f962ce976c6aba67ab3baaf26be447c26e80"
+  integrity sha512-55OUIKJQXTS+ZboaJ9gncgpthzqXe7gzE0lsZtt2tGE3YUD0o/nn6bfkc0mquzt8Sh0+Dd8vBqmSGNXvl2tlUA==
 
 react-use@^5.7.1:
   version "5.7.1"
@@ -11152,6 +11241,11 @@ schema-utils@^1.0.0:
     ajv-errors "^1.0.0"
     ajv-keywords "^3.1.0"
 
+screenfull@^3.3.2:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/screenfull/-/screenfull-3.3.3.tgz#8cf7e706aceac2e75131aadcb81b622acfe11d39"
+  integrity sha512-DzYUuXr+OV2BDvYXaYzlYgJd4WXZZ2CW5NFC7Kw6TUCpzXJAx4MwlVD6CH+Mu6fi8rfAQIQfqdFZ4jtDsEkWig==
+
 select@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
@@ -11322,7 +11416,7 @@ shallow-clone@^0.1.2:
     lazy-cache "^0.2.3"
     mixin-object "^2.0.1"
 
-shallowequal@^1.0.2, shallowequal@^1.1.0:
+shallowequal@^1.0.1, shallowequal@^1.0.2, shallowequal@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
