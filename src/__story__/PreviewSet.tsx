@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {Icon} from '../types';
 import Svg from '..';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const styles = {
   set: {
@@ -31,9 +32,11 @@ const PreviewIcon: React.FC<Icon & {size?: number}> = ({set, icon, size = 24}) =
   };
 
   return (
-    <div style={styles.block} title={icon}>
-      <Svg style={styles.svg} set={set as any} icon={icon as any} />
-    </div>
+    <Tooltip title={icon} placement="top">
+      <div style={styles.block}>
+        <Svg style={styles.svg} set={set as any} icon={icon as any} />
+      </div>
+    </Tooltip>
   );
 };
 
