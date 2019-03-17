@@ -27,6 +27,15 @@ storiesOf('ibm_32', module)
 
 storiesOf('atlaskit', module).add('dropbox', () => <Svg set="atlaskit" icon="dropbox" />);
 
+storiesOf('ant_fill', module)
+  .add('alert', () => <Svg set="ant_fill" icon="alert" />);
+
+storiesOf('ant_outline', module)
+  .add('alert', () => <Svg set="ant_outline" icon="alert" />);
+
+storiesOf('ant_twotone', module)
+  .add('alert', () => <Svg set="ant_twotone" icon="alert" />);
+
 storiesOf('Test', module)
   .add('can apply fill color', () => {
     return (
