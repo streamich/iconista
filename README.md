@@ -1,9 +1,11 @@
 # iconista
 
-- Hundreds of SVG icons in one React component
-- [__Pick icon__](https://35-175650538-gh.circle-artifacts.com/0/root/repo/storybook-static/index.html)
-- Just [one 50-line component](https://github.com/streamich/iconista/blob/master/src/index.tsx)
+- [__Pick an icon!__](https://35-175650538-gh.circle-artifacts.com/0/root/repo/storybook-static/index.html)
+- Hundreds 💯+ of SVG icons in one React component
+- Just [one 50-line React component](https://github.com/streamich/iconista/blob/master/src/index.tsx)
 - TypeScript autocompletion for icon sets and icons
+- Inlines icons as SVG elements, so you can apply CSS styling to them
+- All icons are responsive (SVG `widht` and `height` attributes are removed)
 
 ![](./docs/icon.gif)
 
