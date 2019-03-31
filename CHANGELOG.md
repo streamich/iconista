@@ -1,3 +1,11 @@
+# [2.6.0](https://github.com/streamich/iconista/compare/v2.5.0...v2.6.0) (2019-03-31)
+
+
+### Features
+
+* 🎸 add Cosmos icons to library ([1cdda5e](https://github.com/streamich/iconista/commit/1cdda5e))
+* 🎸 prepare Auth0 Cosmos icons ([1901dda](https://github.com/streamich/iconista/commit/1901dda))
+
 # [2.5.0](https://github.com/streamich/iconista/compare/v2.4.0...v2.5.0) (2019-03-17)
 
 
