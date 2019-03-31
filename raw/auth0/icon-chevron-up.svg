@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/chevron-up</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/chevron-up" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M10.154,6.241 C10.012,6.235 9.869,6.283 9.76,6.391 C9.737,6.415 9.743,6.451 9.724,6.478 L3.655,13.096 C3.449,13.303 3.449,13.638 3.655,13.844 C3.862,14.051 4.196,14.051 4.403,13.844 L10.156,7.57 L15.911,13.845 C16.118,14.052 16.452,14.052 16.659,13.845 C16.866,13.639 16.866,13.304 16.659,13.097 L10.59,6.48 C10.571,6.452 10.577,6.415 10.553,6.391 C10.451,6.288 10.317,6.24 10.182,6.24 C10.173,6.24 10.163,6.24 10.154,6.241 Z" id="Shape" fill="#000000"></path>
+    </g>
+</svg>
