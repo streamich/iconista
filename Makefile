@@ -69,6 +69,17 @@ ant_twotone:
 	@node -e 'fs.writeFileSync("sets/ant_twotone/index.txt", fs.readdirSync("sets/ant_twotone").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/ant_twotone/index.json", JSON.stringify(fs.readFileSync("sets/ant_twotone/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: auth0
+auth0:
+	@npx rimraf tmp/auth0 sets/auth0
+	@npx mkdirp tmp/auth0 sets/auth0
+	@find raw/auth0 -maxdepth 1 -type f | xargs -I {} cp {} tmp/auth0
+	@node -e 'fs.readdirSync("tmp/auth0").forEach(n => fs.renameSync("tmp/auth0/" + n, "tmp/auth0/" + n.substr(5)))'
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/auth0/*.svg
+	@cp tmp/auth0/* sets/auth0
+	@node -e 'fs.writeFileSync("sets/auth0/index.txt", fs.readdirSync("sets/auth0").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/auth0/index.json", JSON.stringify(fs.readFileSync("sets/auth0/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
