@@ -4,5 +4,8 @@ ant_twotone
 atlaskit
 auth0
 elastic
+fontawesome_brands
+fontawesome_regular
+fontawesome_solid
 ibm_16
 ibm_32
