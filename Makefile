@@ -80,6 +80,36 @@ auth0:
 	@node -e 'fs.writeFileSync("sets/auth0/index.txt", fs.readdirSync("sets/auth0").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/auth0/index.json", JSON.stringify(fs.readFileSync("sets/auth0/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: fontawesome_brands
+fontawesome_brands:
+	@npx rimraf tmp/fontawesome_brands sets/fontawesome_brands
+	@npx mkdirp tmp/fontawesome_brands sets/fontawesome_brands
+	@find raw/fontawesome_brands -maxdepth 1 -type f | xargs -I {} cp {} tmp/fontawesome_brands
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/fontawesome_brands/*.svg
+	@cp tmp/fontawesome_brands/* sets/fontawesome_brands
+	@node -e 'fs.writeFileSync("sets/fontawesome_brands/index.txt", fs.readdirSync("sets/fontawesome_brands").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/fontawesome_brands/index.json", JSON.stringify(fs.readFileSync("sets/fontawesome_brands/index.txt", "utf8").split("\n"), null, 2))'
+
+.PHONY: fontawesome_regular
+fontawesome_regular:
+	@npx rimraf tmp/fontawesome_regular sets/fontawesome_regular
+	@npx mkdirp tmp/fontawesome_regular sets/fontawesome_regular
+	@find raw/fontawesome_regular -maxdepth 1 -type f | xargs -I {} cp {} tmp/fontawesome_regular
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/fontawesome_regular/*.svg
+	@cp tmp/fontawesome_regular/* sets/fontawesome_regular
+	@node -e 'fs.writeFileSync("sets/fontawesome_regular/index.txt", fs.readdirSync("sets/fontawesome_regular").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/fontawesome_regular/index.json", JSON.stringify(fs.readFileSync("sets/fontawesome_regular/index.txt", "utf8").split("\n"), null, 2))'
+
+.PHONY: fontawesome_solid
+fontawesome_solid:
+	@npx rimraf tmp/fontawesome_solid sets/fontawesome_solid
+	@npx mkdirp tmp/fontawesome_solid sets/fontawesome_solid
+	@find raw/fontawesome_solid -maxdepth 1 -type f | xargs -I {} cp {} tmp/fontawesome_solid
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/fontawesome_solid/*.svg
+	@cp tmp/fontawesome_solid/* sets/fontawesome_solid
+	@node -e 'fs.writeFileSync("sets/fontawesome_solid/index.txt", fs.readdirSync("sets/fontawesome_solid").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/fontawesome_solid/index.json", JSON.stringify(fs.readFileSync("sets/fontawesome_solid/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
