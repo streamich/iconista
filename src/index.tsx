@@ -2,9 +2,24 @@ import * as React from 'react';
 import {getUrl} from './getUrl';
 import {Icon} from './types';
 import useRefMounted from 'react-use/lib/useRefMounted';
+import {throttle} from './throttle';
 
 const {useEffect, useState, useRef} = React;
 const cache: {[key: string]: Document} = {};
+
+const loadDoc = (url) => new Promise((resolve, reject) => {
+  const req = new XMLHttpRequest();
+  req.onreadystatechange = () => {
+    const {readyState, status, responseXML: doc} = req;
+    if (readyState !== 4) return;
+    if (status !== 200) return reject(new Error(`SVG loading HTTP ${status} error: ${url}`));
+    if (!doc!) return reject(new Error(`Could not load SVG Document: ${url}`));
+    resolve(doc!);
+  };
+  req.open('GET', url, true);
+  req.send();
+});
+const loadDoc2 = throttle(loadDoc, 3) as any;
 
 const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, icon, ...rest}) => {
   const ref = useRef<SVGSVGElement | null>(null);
@@ -33,17 +48,13 @@ const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, ico
     if (cache[key]) applyDoc(cache[key]);
     else {
       const url = getUrl({set, icon} as Icon);
-      const req = new XMLHttpRequest();
-      req.onreadystatechange = () => {
+      loadDoc2(url).then((doc: any) => {
         if (!refMounted.current) return;
-        const {readyState, status, responseXML: doc} = req;
-        if (readyState !== 4) return;
-        if (status !== 200) return setError(new Error(`SVG loading HTTP ${status} error: ${url}`));
-        if (!doc!) return setError(new Error(`Could not load SVG Document: ${url}`));
-        applyDoc((cache[key] = doc!));
-      };
-      req.open('GET', url, true);
-      req.send();
+        applyDoc(cache[key] = doc!);
+      }, error => {
+        if (!refMounted.current) return;
+        setError(error);
+      });
     }
   }, [set, icon]);
 
