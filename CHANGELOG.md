@@ -1,3 +1,12 @@
+# [2.7.0](https://github.com/streamich/iconista/compare/v2.6.0...v2.7.0) (2019-04-01)
+
+
+### Features
+
+* 🎸 add Font Awesome icons ([ee4e6ce](https://github.com/streamich/iconista/commit/ee4e6ce))
+* 🎸 add Font Awesome icons to library ([5fca8db](https://github.com/streamich/iconista/commit/5fca8db))
+* 🎸 build Font Awesome icons ([f25fe82](https://github.com/streamich/iconista/commit/f25fe82))
+
 # [2.6.0](https://github.com/streamich/iconista/compare/v2.5.0...v2.6.0) (2019-03-31)
 
 
