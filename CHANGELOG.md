@@ -1,3 +1,10 @@
+# [2.8.0](https://github.com/streamich/iconista/compare/v2.7.0...v2.8.0) (2019-04-01)
+
+
+### Features
+
+* 🎸 allow 3 concurrent .svg requests at a time ([53a99ca](https://github.com/streamich/iconista/commit/53a99ca))
+
 # [2.7.0](https://github.com/streamich/iconista/compare/v2.6.0...v2.7.0) (2019-04-01)
 
 
