@@ -110,6 +110,16 @@ fontawesome_solid:
 	@node -e 'fs.writeFileSync("sets/fontawesome_solid/index.txt", fs.readdirSync("sets/fontawesome_solid").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/fontawesome_solid/index.json", JSON.stringify(fs.readFileSync("sets/fontawesome_solid/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: pluralsight
+pluralsight:
+	@npx rimraf tmp/pluralsight sets/pluralsight
+	@npx mkdirp tmp/pluralsight sets/pluralsight
+	@find node_modules/@pluralsight/ps-design-system-icon/dist/svg -maxdepth 1 -type f | xargs -I {} cp {} tmp/pluralsight
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/pluralsight/*.svg
+	@cp tmp/pluralsight/* sets/pluralsight
+	@node -e 'fs.writeFileSync("sets/pluralsight/index.txt", fs.readdirSync("sets/pluralsight").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/pluralsight/index.json", JSON.stringify(fs.readFileSync("sets/pluralsight/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*

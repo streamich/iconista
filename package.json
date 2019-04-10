@@ -52,6 +52,7 @@
     "@commitlint/config-conventional": "^7.5.0",
     "@elastic/eui": "^6.10.5",
     "@material-ui/core": "^3.9.2",
+    "@pluralsight/ps-design-system-icon": "^11.2.0",
     "@semantic-release/changelog": "^3.0.2",
     "@semantic-release/git": "^7.0.8",
     "@semantic-release/npm": "^5.1.4",
