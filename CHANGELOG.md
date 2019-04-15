@@ -1,3 +1,11 @@
+# [2.9.0](https://github.com/streamich/iconista/compare/v2.8.0...v2.9.0) (2019-04-15)
+
+
+### Features
+
+* 🎸 add pluralsight icons ([c42b2ff](https://github.com/streamich/iconista/commit/c42b2ff))
+* 🎸 add pluralsight_illustrations illustration set ([daba6f6](https://github.com/streamich/iconista/commit/daba6f6))
+
 # [2.8.0](https://github.com/streamich/iconista/compare/v2.7.0...v2.8.0) (2019-04-01)
 
 
