@@ -30,17 +30,19 @@ export const throttle = (fn, concurrency = 3) => {
   };
 
   let next;
-  next = args => {
+  next = (args) => {
     if (args) {
       count++;
-      fn.apply(args.self, args).then(args.resolve, args.reject).then(() => {
-        count--;
-        if (count < concurrency) next(shift());
-      });
+      fn.apply(args.self, args)
+        .then(args.resolve, args.reject)
+        .then(() => {
+          count--;
+          if (count < concurrency) next(shift());
+        });
     }
   };
 
-  return function (this: any, ...args: Args) {
+  return function(this: any, ...args: Args) {
     return new Promise((resolve, reject) => {
       // tslint:disable-next-line no-invalid-this
       args.self = this;

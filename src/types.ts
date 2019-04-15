@@ -11,7 +11,9 @@ export type Sets =
   | 'fontawesome_regular'
   | 'fontawesome_solid'
   | 'ibm_16'
-  | 'ibm_32';
+  | 'ibm_32'
+  | 'pluralsight'
+  | 'pluralsight_illustrations';
 
 export type icons_ant_fill =
   | 'account-book'
@@ -3402,6 +3404,99 @@ export type icons_ibm_32 =
   | 'zoom--in'
   | 'zoom--out';
 
+export type icons_pluralsight =
+  | 'account.icon'
+  | 'bookmark-fill.icon'
+  | 'bookmark.icon'
+  | 'briefcase.icon'
+  | 'browse.icon'
+  | 'calendar.icon'
+  | 'caret-down.icon'
+  | 'caret-left.icon'
+  | 'caret-right.icon'
+  | 'caret-up.icon'
+  | 'cc-fill.icon'
+  | 'channel-add.icon'
+  | 'channel.icon'
+  | 'chat.icon'
+  | 'check-circle-fill.icon'
+  | 'check.icon'
+  | 'close.icon'
+  | 'code.icon'
+  | 'copy.icon'
+  | 'dashboard.icon'
+  | 'download.icon'
+  | 'envelope.icon'
+  | 'file.icon'
+  | 'gear.icon'
+  | 'hand.icon'
+  | 'home.icon'
+  | 'info.icon'
+  | 'interactive.icon'
+  | 'link.icon'
+  | 'list.icon'
+  | 'lock.icon'
+  | 'logout.icon'
+  | 'menu.icon'
+  | 'mic.icon'
+  | 'more.icon'
+  | 'note.icon'
+  | 'org.icon'
+  | 'path.icon'
+  | 'pencil.icon'
+  | 'play-circle.icon'
+  | 'play.icon'
+  | 'plus-circle.icon'
+  | 'plus.icon'
+  | 'project.icon'
+  | 'question.icon'
+  | 'report.icon'
+  | 'scope.icon'
+  | 'search.icon'
+  | 'share.icon'
+  | 'sort-asc.icon'
+  | 'sort-desc.icon'
+  | 'sort.icon'
+  | 'star-fill.icon'
+  | 'star.icon'
+  | 'tag.icon'
+  | 'test.icon'
+  | 'thumb-down-fill.icon'
+  | 'thumb-down.icon'
+  | 'thumb-up-fill.icon'
+  | 'thumb-up.icon'
+  | 'trash.icon'
+  | 'upload.icon'
+  | 'user.icon'
+  | 'video.icon'
+  | 'warning.icon'
+  | 'window.icon';
+
+export type icons_pluralsight_illustrations =
+  | 'bookmark-small'
+  | 'bookmark'
+  | 'channel-small'
+  | 'channel'
+  | 'cloud-small'
+  | 'cloud'
+  | 'code-small'
+  | 'code'
+  | 'data-small'
+  | 'data'
+  | 'disconnected'
+  | 'document-small'
+  | 'document'
+  | 'interactive'
+  | 'magnify-small'
+  | 'magnify'
+  | 'search'
+  | 'signal-small'
+  | 'signal'
+  | 'video-small'
+  | 'video'
+  | 'zen-small'
+  | 'zen';
+
 export type Icon =
   | {set: 'ant_fill'; icon: icons_ant_fill; version?: string}
   | {set: 'ant_outline'; icon: icons_ant_outline; version?: string}
@@ -3413,4 +3508,6 @@ export type Icon =
   | {set: 'fontawesome_regular'; icon: icons_fontawesome_regular; version?: string}
   | {set: 'fontawesome_solid'; icon: icons_fontawesome_solid; version?: string}
   | {set: 'ibm_16'; icon: icons_ibm_16; version?: string}
-  | {set: 'ibm_32'; icon: icons_ibm_32; version?: string};
+  | {set: 'ibm_32'; icon: icons_ibm_32; version?: string}
+  | {set: 'pluralsight'; icon: icons_pluralsight; version?: string}
+  | {set: 'pluralsight_illustrations'; icon: icons_pluralsight_illustrations; version?: string};

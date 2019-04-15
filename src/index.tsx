@@ -7,18 +7,19 @@ import {throttle} from './throttle';
 const {useEffect, useState, useRef} = React;
 const cache: {[key: string]: Document} = {};
 
-const loadDoc = (url) => new Promise((resolve, reject) => {
-  const req = new XMLHttpRequest();
-  req.onreadystatechange = () => {
-    const {readyState, status, responseXML: doc} = req;
-    if (readyState !== 4) return;
-    if (status !== 200) return reject(new Error(`SVG loading HTTP ${status} error: ${url}`));
-    if (!doc!) return reject(new Error(`Could not load SVG Document: ${url}`));
-    resolve(doc!);
-  };
-  req.open('GET', url, true);
-  req.send();
-});
+const loadDoc = (url) =>
+  new Promise((resolve, reject) => {
+    const req = new XMLHttpRequest();
+    req.onreadystatechange = () => {
+      const {readyState, status, responseXML: doc} = req;
+      if (readyState !== 4) return;
+      if (status !== 200) return reject(new Error(`SVG loading HTTP ${status} error: ${url}`));
+      if (!doc!) return reject(new Error(`Could not load SVG Document: ${url}`));
+      resolve(doc!);
+    };
+    req.open('GET', url, true);
+    req.send();
+  });
 const loadDoc2 = throttle(loadDoc, 3) as any;
 
 const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, icon, ...rest}) => {
@@ -48,13 +49,16 @@ const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, ico
     if (cache[key]) applyDoc(cache[key]);
     else {
       const url = getUrl({set, icon} as Icon);
-      loadDoc2(url).then((doc: any) => {
-        if (!refMounted.current) return;
-        applyDoc(cache[key] = doc!);
-      }, error => {
-        if (!refMounted.current) return;
-        setError(error);
-      });
+      loadDoc2(url).then(
+        (doc: any) => {
+          if (!refMounted.current) return;
+          applyDoc((cache[key] = doc!));
+        },
+        (error) => {
+          if (!refMounted.current) return;
+          setError(error);
+        },
+      );
     }
   }, [set, icon]);
 
