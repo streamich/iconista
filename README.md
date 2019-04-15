@@ -38,5 +38,5 @@ const url = getUrl({set: 'ibm_16', icon: 'arrow--down'});
 - `auth0` icon set is under [MIT license by Auth0](https://github.com/auth0/cosmos/blob/b37531ae3ade2752ec041c532c90ed03e140143e/LICENSE)
 - `fontawesome_regular` and `fontawesome_solid` icon sets are under [CC BY 4.0 License](https://github.com/FortAwesome/Font-Awesome/blob/1975bba5c4ade236c02bf2e5f9551160ee85109d/LICENSE.txt#L8)
 - `fontawesome_brands` icons set [contains trademarks of respective brands](https://github.com/FortAwesome/Font-Awesome/blob/1975bba5c4ade236c02bf2e5f9551160ee85109d/LICENSE.txt#L30)
-- `pluralsight` icon set is under [Apache License 2.0 by Pluralsight](https://github.com/pluralsight/design-system/blob/f6e81d360336df88764a517440003355c07f761a/LICENSE)
+- `pluralsight` and `pluralsight_illustrations` icon sets are under [Apache License 2.0 by Pluralsight](https://github.com/pluralsight/design-system/blob/f6e81d360336df88764a517440003355c07f761a/LICENSE)
 - This project is under [Unlicense](LICENSE) license &mdash; public domain.

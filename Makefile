@@ -120,6 +120,16 @@ pluralsight:
 	@node -e 'fs.writeFileSync("sets/pluralsight/index.txt", fs.readdirSync("sets/pluralsight").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/pluralsight/index.json", JSON.stringify(fs.readFileSync("sets/pluralsight/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: pluralsight_illustrations
+pluralsight_illustrations:
+	@npx rimraf tmp/pluralsight_illustrations sets/pluralsight_illustrations
+	@npx mkdirp tmp/pluralsight_illustrations sets/pluralsight_illustrations
+	@find node_modules/@pluralsight/ps-design-system-emptystate/dist/svg -maxdepth 1 -type f | xargs -I {} cp {} tmp/pluralsight_illustrations
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/pluralsight_illustrations/*.svg
+	@cp tmp/pluralsight_illustrations/* sets/pluralsight_illustrations
+	@node -e 'fs.writeFileSync("sets/pluralsight_illustrations/index.txt", fs.readdirSync("sets/pluralsight_illustrations").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/pluralsight_illustrations/index.json", JSON.stringify(fs.readFileSync("sets/pluralsight_illustrations/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*

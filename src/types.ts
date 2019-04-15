@@ -12,7 +12,8 @@ export type Sets =
   | 'fontawesome_solid'
   | 'ibm_16'
   | 'ibm_32'
-  | 'pluralsight';
+  | 'pluralsight'
+  | 'pluralsight_illustrations';
 
 export type icons_ant_fill =
   | 'account-book'
@@ -3471,6 +3472,31 @@ export type icons_pluralsight =
   | 'warning.icon'
   | 'window.icon';
 
+export type icons_pluralsight_illustrations =
+  | 'bookmark-small'
+  | 'bookmark'
+  | 'channel-small'
+  | 'channel'
+  | 'cloud-small'
+  | 'cloud'
+  | 'code-small'
+  | 'code'
+  | 'data-small'
+  | 'data'
+  | 'disconnected'
+  | 'document-small'
+  | 'document'
+  | 'interactive'
+  | 'magnify-small'
+  | 'magnify'
+  | 'search'
+  | 'signal-small'
+  | 'signal'
+  | 'video-small'
+  | 'video'
+  | 'zen-small'
+  | 'zen';
+
 export type Icon =
   | {set: 'ant_fill'; icon: icons_ant_fill; version?: string}
   | {set: 'ant_outline'; icon: icons_ant_outline; version?: string}
@@ -3483,4 +3509,5 @@ export type Icon =
   | {set: 'fontawesome_solid'; icon: icons_fontawesome_solid; version?: string}
   | {set: 'ibm_16'; icon: icons_ibm_16; version?: string}
   | {set: 'ibm_32'; icon: icons_ibm_32; version?: string}
-  | {set: 'pluralsight'; icon: icons_pluralsight; version?: string};
+  | {set: 'pluralsight'; icon: icons_pluralsight; version?: string}
+  | {set: 'pluralsight_illustrations'; icon: icons_pluralsight_illustrations; version?: string};
