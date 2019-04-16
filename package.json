@@ -1,6 +1,6 @@
 {
   "name": "iconista",
-  "version": "2.9.0",
+  "version": "2.9.1",
   "description": "",
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
