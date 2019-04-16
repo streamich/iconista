@@ -2,7 +2,6 @@ import * as React from 'react';
 import {getUrl} from './getUrl';
 import {Icon} from './types';
 import useRefMounted from 'react-use/lib/useRefMounted';
-import {throttle} from './throttle';
 
 const {useEffect, useState, useRef} = React;
 const cache: {[key: string]: Document} = {};
@@ -20,7 +19,6 @@ const loadDoc = (url) =>
     req.open('GET', url, true);
     req.send();
   });
-const loadDoc2 = throttle(loadDoc, 3) as any;
 
 const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, icon, ...rest}) => {
   const ref = useRef<SVGSVGElement | null>(null);
@@ -32,7 +30,7 @@ const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, ico
       const el = ref.current;
       if (!el) return;
 
-      const svg = doc!.getRootNode().childNodes[0] as SVGSVGElement;
+      const svg = (doc as any).getRootNode().childNodes[0] as SVGSVGElement;
       const {childNodes} = svg;
 
       // Set SVG child nodes.
@@ -49,7 +47,7 @@ const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, ico
     if (cache[key]) applyDoc(cache[key]);
     else {
       const url = getUrl({set, icon} as Icon);
-      loadDoc2(url).then(
+      loadDoc(url).then(
         (doc: any) => {
           if (!refMounted.current) return;
           applyDoc((cache[key] = doc!));
