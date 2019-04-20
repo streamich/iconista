@@ -130,6 +130,16 @@ pluralsight_illustrations:
 	@node -e 'fs.writeFileSync("sets/pluralsight_illustrations/index.txt", fs.readdirSync("sets/pluralsight_illustrations").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/pluralsight_illustrations/index.json", JSON.stringify(fs.readFileSync("sets/pluralsight_illustrations/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: emojione_v2
+emojione_v2:
+	@npx rimraf tmp/emojione_v2 sets/emojione_v2
+	@npx mkdirp tmp/emojione_v2 sets/emojione_v2
+	@find node_modules/emojione/assets/svg -maxdepth 1 -type f | xargs -I {} cp {} tmp/emojione_v2
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/emojione_v2/*.svg
+	@cp tmp/emojione_v2/* sets/emojione_v2
+	@node -e 'fs.writeFileSync("sets/emojione_v2/index.txt", fs.readdirSync("sets/emojione_v2").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/emojione_v2/index.json", JSON.stringify(fs.readFileSync("sets/emojione_v2/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
