@@ -1,3 +1,10 @@
+# [2.10.0](https://github.com/streamich/iconista/compare/v2.9.1...v2.10.0) (2019-04-20)
+
+
+### Features
+
+* 🎸 add emojione v2.2.7 icon set ([3011a75](https://github.com/streamich/iconista/commit/3011a75))
+
 ## [2.9.1](https://github.com/streamich/iconista/compare/v2.9.0...v2.9.1) (2019-04-16)
 
 
