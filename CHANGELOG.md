@@ -1,3 +1,10 @@
+# [2.12.0](https://github.com/streamich/iconista/compare/v2.11.0...v2.12.0) (2019-12-29)
+
+
+### Features
+
+* 🎸 use <img> to preview icons in Storybook ([cc2fa72](https://github.com/streamich/iconista/commit/cc2fa72))
+
 # [2.11.0](https://github.com/streamich/iconista/compare/v2.10.0...v2.11.0) (2019-12-29)
 
 
