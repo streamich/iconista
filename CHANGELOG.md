@@ -1,3 +1,10 @@
+# [2.11.0](https://github.com/streamich/iconista/compare/v2.10.0...v2.11.0) (2019-12-29)
+
+
+### Features
+
+* 🎸 make CDN URL configurable ([a018b12](https://github.com/streamich/iconista/commit/a018b12))
+
 # [2.10.0](https://github.com/streamich/iconista/compare/v2.9.1...v2.10.0) (2019-04-20)
 
 
