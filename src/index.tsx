@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {getUrl} from './getUrl';
+import {getUrl as getUrlDefault} from './getUrl';
 import {Icon} from './types';
 import useRefMounted from 'react-use/lib/useRefMounted';
 
@@ -20,7 +20,12 @@ const loadDoc = (url) =>
     req.send();
   });
 
-const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, icon, ...rest}) => {
+export type Props = Icon &
+  React.SVGAttributes<any> & {
+    getUrl?: (icon: Icon) => string;
+  };
+
+const Svg: React.FunctionComponent<Props> = ({set, icon, getUrl = getUrlDefault, ...rest}) => {
   const ref = useRef<SVGSVGElement | null>(null);
   const refMounted = useRefMounted();
   const [error, setError] = useState<Error | undefined>();
@@ -62,11 +67,10 @@ const Svg: React.FunctionComponent<Icon & React.SVGAttributes<any>> = ({set, ico
 
   if (error) {
     const url = getUrl({set, icon} as Icon);
-    return <img src={url} title={error.message} />;
+    return <img {...rest} src={url} title={error.message} />;
   }
 
   return <svg ref={ref} {...rest} />;
 };
 
-export {getUrl, Svg};
 export default Svg;

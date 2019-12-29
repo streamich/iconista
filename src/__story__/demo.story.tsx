@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {storiesOf} from '@storybook/react';
-import {Svg} from '..';
+import Svg from '..';
 import {rule} from 'p4-css';
 import PreviewSet from './PreviewSet';
 const sets = require('../../sets');
