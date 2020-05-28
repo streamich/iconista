@@ -1,6 +1,5 @@
 # iconista
 
-- [__Pick an icon!__](https://68-175650538-gh.circle-artifacts.com/0/root/repo/storybook-static/index.html)
 - Hundreds 💯+ of SVG icons in one React component
 - Just one React component
 - [TypeScript autocompletion](./docs/icon.gif) for icon sets and icons
