@@ -1,3 +1,16 @@
+# [2.13.0](https://github.com/streamich/iconista/compare/v2.12.0...v2.13.0) (2020-05-28)
+
+
+### Bug Fixes
+
+* release patch ([3a5f8a2](https://github.com/streamich/iconista/commit/3a5f8a2))
+* trigger minor release ([3b93a36](https://github.com/streamich/iconista/commit/3b93a36))
+
+
+### Features
+
+* release minor ([f370aeb](https://github.com/streamich/iconista/commit/f370aeb))
+
 # [2.12.0](https://github.com/streamich/iconista/compare/v2.11.0...v2.12.0) (2019-12-29)
 
 
