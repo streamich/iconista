@@ -1,3 +1,10 @@
+## [2.13.1](https://github.com/streamich/iconista/compare/v2.13.0...v2.13.1) (2020-07-25)
+
+
+### Bug Fixes
+
+* bump minor ([ac34316](https://github.com/streamich/iconista/commit/ac34316))
+
 # [2.13.0](https://github.com/streamich/iconista/compare/v2.12.0...v2.13.0) (2020-05-28)
 
 
