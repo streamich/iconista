@@ -1,7 +1,7 @@
 # iconista
 
 - Hundreds 💯+ of SVG icons in one React component
-- Just one React component
+- One React component
 - [TypeScript autocompletion](./docs/icon.gif) for icon sets and icons
 - Inlines icons as SVG elements, so you can apply CSS styling to them
 - All icons are responsive (SVG `widht` and `height` attributes are removed)
