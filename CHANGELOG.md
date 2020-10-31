@@ -1,3 +1,10 @@
+# [2.14.0](https://github.com/streamich/iconista/compare/v2.13.2...v2.14.0) (2020-10-31)
+
+
+### Features
+
+* release ([37b5fb2](https://github.com/streamich/iconista/commit/37b5fb2))
+
 ## [2.13.2](https://github.com/streamich/iconista/compare/v2.13.1...v2.13.2) (2020-09-06)
 
 
