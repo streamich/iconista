@@ -22,9 +22,9 @@ import Svg from 'iconista';
 Or, simply get the icon URL:
 
 ```js
-import {getUrl} from 'iconista/lib/getUrl';
+import {getUrl} from 'iconista/lib/getUrl'
 
-const url = getUrl({set: 'ibm_16', icon: 'arrow--down'});
+const url = getUrl({set: 'ibm_16', icon: 'arrow--down'})
 ```
 
 
