@@ -1,3 +1,10 @@
+# [2.16.0](https://github.com/streamich/iconista/compare/v2.15.0...v2.16.0) (2021-04-01)
+
+
+### Features
+
+* publish latest ([abbb15c](https://github.com/streamich/iconista/commit/abbb15c))
+
 # [2.15.0](https://github.com/streamich/iconista/compare/v2.14.0...v2.15.0) (2021-02-20)
 
 
