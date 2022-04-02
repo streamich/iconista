@@ -33,10 +33,12 @@
     "release": "semantic-release",
     "storybook": "start-storybook -p 6010",
     "storybook:build": "build-storybook",
+    "storybook:deploy": "gh-pages -d storybook-static",
     "storybook:clean": "rimraf storybook-static"
   },
   "keywords": [],
   "dependencies": {
+    "gh-pages": "^3.2.3",
     "react-use": "^5.7.1"
   },
   "peerDependencies": {
