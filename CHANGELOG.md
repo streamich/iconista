@@ -1,3 +1,10 @@
+## [2.16.1](https://github.com/streamich/iconista/compare/v2.16.0...v2.16.1) (2022-04-02)
+
+
+### Bug Fixes
+
+* bump fix version ([aed63a6](https://github.com/streamich/iconista/commit/aed63a6))
+
 # [2.16.0](https://github.com/streamich/iconista/compare/v2.15.0...v2.16.0) (2021-04-01)
 
 
