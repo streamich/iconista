@@ -18,3 +18,5 @@ radix
 simple
 tabler
 tabler_filled
+vscode
+vscode_dark

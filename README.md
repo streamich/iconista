@@ -58,6 +58,9 @@ https://esm.sh/iconista@2/sets/{set}/{icon}.svg
 
 ## License
 
+All icon sets and this repository are distributed under permissive open-source
+licenses:
+
 - `elastic` icon set is under [Apache License 2.0 by Elastic](https://github.com/elastic/eui/blob/master/LICENSE).
 - `ibm_16` and `ibm_32` icon sets are under [Apache License 2.0 by IBM](https://github.com/IBM/carbon-elements/blob/master/LICENSE).
 - `atlaskit` icon set is under [Apache License 2.0 by Atlassian](https://bitbucket.org/atlassian/atlaskit-mk-2/src/master/LICENSE).
@@ -72,4 +75,5 @@ https://esm.sh/iconista@2/sets/{set}/{icon}.svg
 - `lineicons` icon set is under [MIT licenses](https://github.com/LineiconsHQ/Lineicons/blob/2630a45a259164dea83497d6dfeb9050c054fc22/LICENSE.md).
 - `tabler` and `tabler_filled` icon sets are under [MIT license](https://github.com/tabler/tabler-icons/blob/e54656d27e9682d61482626bf9f4d093928b7c95/LICENSE).
 - `simple` icon set is under [CC0 1.0 Universal license](https://github.com/simple-icons/simple-icons/blob/ac87321562995f2e55272ac06b5e68308edb6c0b/LICENSE.md).
+- `vscode` and `vscode_dark` icon sets are under [CC Attribution 4.0 International](https://github.com/microsoft/vscode-icons/blob/2ca0f3225c1ecd16537107f60f109317fcfc3eb0/LICENSE).
 - This project is under [Unlicense](LICENSE) license &mdash; public domain.

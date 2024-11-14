@@ -200,6 +200,26 @@ simple:
 	@node -e 'fs.writeFileSync("sets/simple/index.txt", fs.readdirSync("sets/simple").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/simple/index.json", JSON.stringify(fs.readFileSync("sets/simple/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: vscode
+vscode:
+	@npx rimraf tmp/vscode sets/vscode
+	@npx mkdirp tmp/vscode sets/vscode
+	@find raw/vscode -maxdepth 1 -type f | xargs -I {} cp {} tmp/vscode
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/vscode/*.svg
+	@cp tmp/vscode/* sets/vscode
+	@node -e 'fs.writeFileSync("sets/vscode/index.txt", fs.readdirSync("sets/vscode").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/vscode/index.json", JSON.stringify(fs.readFileSync("sets/vscode/index.txt", "utf8").split("\n"), null, 2))'
+
+.PHONY: vscode_dark
+vscode_dark:
+	@npx rimraf tmp/vscode_dark sets/vscode_dark
+	@npx mkdirp tmp/vscode_dark sets/vscode_dark
+	@find raw/vscode_dark -maxdepth 1 -type f | xargs -I {} cp {} tmp/vscode_dark
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/vscode_dark/*.svg
+	@cp tmp/vscode_dark/* sets/vscode_dark
+	@node -e 'fs.writeFileSync("sets/vscode_dark/index.txt", fs.readdirSync("sets/vscode_dark").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/vscode_dark/index.json", JSON.stringify(fs.readFileSync("sets/vscode_dark/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*

@@ -18,5 +18,7 @@
   "radix",
   "simple",
   "tabler",
-  "tabler_filled"
+  "tabler_filled",
+  "vscode",
+  "vscode_dark"
 ]

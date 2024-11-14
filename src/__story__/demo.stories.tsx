@@ -115,3 +115,13 @@ export const tabler_filled: Story = {
   name: 'tabler_filled',
   render: () => <PreviewSet set={'tabler_filled'} icons={require('../../sets/tabler_filled')} />,
 };
+
+export const vscode: Story = {
+  name: 'vscode',
+  render: () => <PreviewSet set={'vscode'} icons={require('../../sets/vscode')} />,
+};
+
+export const vscode_dark: Story = {
+  name: 'vscode_dark',
+  render: () => <PreviewSet set={'vscode_dark'} icons={require('../../sets/vscode_dark')} />,
+};
