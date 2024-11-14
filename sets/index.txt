@@ -15,3 +15,5 @@ lucide
 pluralsight
 pluralsight_illustrations
 radix
+tabler
+tabler_filled

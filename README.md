@@ -1,11 +1,13 @@
 # iconista
 
-- Hundreds 💯+ of SVG icons in one React component. [Go to Storybook][storybook]
-- One React component
-- [TypeScript autocompletion](./docs/icon.gif) for icon sets and icons
-- Inlines icons as SVG elements, so you can apply CSS styling to them
-- All icons are responsive (SVG `widht` and `height` attributes are removed)
-- `fill` SVG properties are not set, so you can color icons with CSS
+- Thousands of SVG icons. [See to Storybook][storybook].
+- Just one React component.
+- Icons are lazy-loaded, so you only load the icons you use.
+- [TypeScript autocompletion](./docs/icon.gif) for icon sets and icons.
+- Inline icons as SVG elements, so you can apply CSS styling to them.
+- All icons are responsive (SVG `widht` and `height` attributes are removed).
+- `fill` SVG properties are not set, so you can color icons with CSS.
+- SVG icons are optimized with SVGO.
 
 
 [![image](https://user-images.githubusercontent.com/9773803/55281453-d8aafc80-5334-11e9-88b2-b275e41c9ec6.png)][storybook]
@@ -68,4 +70,5 @@ https://esm.sh/iconista@2/sets/{set}/{icon}.svg
 - `radix` icon set is under [MIT license by WorkOS](https://github.com/radix-ui/icons/blob/237cd76c007a573c2a6f6caabe9ea3de81393f50/LICENSE).
 - `lucide` icon set is under [ISC and MIT licenses](https://github.com/lucide-icons/lucide/blob/1eee03451a5447069aceaaafbb1967fc78670bf8/LICENSE).
 - `lineicons` icon set is under [MIT licenses](https://github.com/LineiconsHQ/Lineicons/blob/2630a45a259164dea83497d6dfeb9050c054fc22/LICENSE.md).
+- `tabler` and `tabler_filled` icon sets are under [MIT license](https://github.com/tabler/tabler-icons/blob/e54656d27e9682d61482626bf9f4d093928b7c95/LICENSE).
 - This project is under [Unlicense](LICENSE) license &mdash; public domain.

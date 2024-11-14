@@ -170,6 +170,26 @@ lineicons:
 	@node -e 'fs.writeFileSync("sets/lineicons/index.txt", fs.readdirSync("sets/lineicons").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/lineicons/index.json", JSON.stringify(fs.readFileSync("sets/lineicons/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: tabler
+tabler:
+	@npx rimraf tmp/tabler sets/tabler
+	@npx mkdirp tmp/tabler sets/tabler
+	@find node_modules/@tabler/icons/icons/outline -maxdepth 1 -type f | xargs -I {} cp {} tmp/tabler
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/tabler/*.svg
+	@cp tmp/tabler/* sets/tabler
+	@node -e 'fs.writeFileSync("sets/tabler/index.txt", fs.readdirSync("sets/tabler").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/tabler/index.json", JSON.stringify(fs.readFileSync("sets/tabler/index.txt", "utf8").split("\n"), null, 2))'
+
+.PHONY: tabler_filled
+tabler_filled:
+	@npx rimraf tmp/tabler_filled sets/tabler_filled
+	@npx mkdirp tmp/tabler_filled sets/tabler_filled
+	@find node_modules/@tabler/icons/icons/filled -maxdepth 1 -type f | xargs -I {} cp {} tmp/tabler_filled
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/tabler_filled/*.svg
+	@cp tmp/tabler_filled/* sets/tabler_filled
+	@node -e 'fs.writeFileSync("sets/tabler_filled/index.txt", fs.readdirSync("sets/tabler_filled").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/tabler_filled/index.json", JSON.stringify(fs.readFileSync("sets/tabler_filled/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
