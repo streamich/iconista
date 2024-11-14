@@ -11,9 +11,6 @@
   "homepage": "https://github.com/streamich/iconista",
   "repository": "streamich/iconista",
   "license": "Unlicense",
-  "engines": {
-    "node": ">=6.9"
-  },
   "main": "lib/index.js",
   "files": [
     "lib/",
@@ -21,18 +18,12 @@
   ],
   "scripts": {
     "start": "yarn storybook",
-    "clean": "rimraf lib",
-    "build": "tsc",
-    "test": "jest --no-cache --config='jest.config.js'",
-    "release": "semantic-release",
-    "storybook": "start-storybook -p 6010",
-    "storybook:build": "build-storybook",
-    "storybook:deploy": "gh-pages -d storybook-static",
-    "storybook:clean": "rimraf storybook-static"
+    "clean": "rimraf lib tmp storybook-static",
+    "build": "tsc --project tsconfig.build.json",
+    "test": "echo \"no tests\""
   },
   "keywords": [],
   "dependencies": {
-    "gh-pages": "^3.2.3",
     "react-use": "^5.7.1"
   },
   "peerDependencies": {
@@ -40,67 +31,28 @@
     "react-dom": "*"
   },
   "devDependencies": {
-    "@ant-design/icons": "^1.2.1",
-    "@atlaskit/icon": "^16.0.5",
-    "@babel/core": "^7.3.4",
-    "@carbon/icons": "^0.0.1-alpha.12",
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "@elastic/eui": "^6.10.5",
+    "@ant-design/icons": "1.2.1",
+    "@atlaskit/icon": "16.0.5",
+    "@carbon/icons": "0.0.1-alpha.12",
+    "@elastic/eui": "6.10.5",
     "@material-ui/core": "^3.9.2",
-    "@pluralsight/ps-design-system-emptystate": "^3.0.3",
-    "@pluralsight/ps-design-system-icon": "^11.2.0",
-    "@semantic-release/changelog": "^3.0.2",
-    "@semantic-release/git": "^7.0.8",
-    "@semantic-release/npm": "^5.1.4",
-    "@storybook/addon-actions": "^5.0.5",
-    "@storybook/addon-backgrounds": "^5.0.5",
-    "@storybook/addon-knobs": "^5.0.5",
-    "@storybook/addon-links": "^5.0.5",
-    "@storybook/addon-notes": "^5.0.5",
-    "@storybook/addon-options": "^5.0.5",
-    "@storybook/addon-viewport": "^5.0.5",
-    "@storybook/react": "^5.0.5",
-    "@types/jest": "^24.0.11",
-    "@types/react": "^16.8.8",
-    "@types/react-dom": "^16.8.2",
-    "babel-loader": "^8.0.5",
-    "copy-to-clipboard": "^3.0.8",
+    "@pluralsight/ps-design-system-emptystate": "3.0.3",
+    "@pluralsight/ps-design-system-icon": "11.2.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "config-galore": "^1.0.0",
+    "copy-to-clipboard": "^3.3.3",
     "emojione": "2.2.7",
-    "fork-ts-checker-webpack-plugin": "^1.0.0",
     "jest": "^24.5.0",
-    "libreact": "^2.12.2",
-    "mkdirp": "^0.5.1",
-    "notistack": "^0.5.1",
-    "p4-css": "^1.1.0",
-    "pretty-quick": "^1.10.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "rimraf": "^2.6.3",
-    "semantic-release": "^15.13.3",
-    "storybook-readme": "^4.0.5",
-    "svgo": "^1.2.0",
-    "ts-jest": "^24.0.0",
-    "ts-loader": "^5.3.3",
-    "ts-node": "^8.0.3",
-    "typescript": "^3.3.3333",
-    "url-loader": "^1.1.2"
-  },
-  "release": {
-    "verifyConditions": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ],
-    "prepare": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git"
-    ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
+    "libreact": "^2.13.3",
+    "mkdirp": "^3.0.1",
+    "nano-theme": "^1.4.3",
+    "notistack": "^3.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rimraf": "^6.0.1",
+    "svgo": "^3.3.2",
+    "typescript": "^5.6.3",
+    "url-loader": "^4.1.1"
   }
 }
