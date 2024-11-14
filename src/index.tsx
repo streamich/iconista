@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {getUrl as getUrlDefault} from './getUrl';
 import {Icon} from './types';
 import useRefMounted from 'react-use/lib/useRefMounted';
@@ -6,7 +6,7 @@ import useRefMounted from 'react-use/lib/useRefMounted';
 const {useEffect, useState, useRef} = React;
 const cache: {[key: string]: Document} = {};
 
-const loadDoc = (url) =>
+const loadDoc = (url: string) =>
   new Promise((resolve, reject) => {
     const req = new XMLHttpRequest();
     req.onreadystatechange = () => {
@@ -25,7 +25,7 @@ export type Props = Icon &
     getUrl?: (icon: Icon) => string;
   };
 
-const Svg: React.FunctionComponent<Props> = ({set, icon, getUrl = getUrlDefault, ...rest}) => {
+const Svg: React.FC<Props> = ({set, icon, getUrl = getUrlDefault, ...rest}) => {
   const ref = useRef<SVGSVGElement | null>(null);
   const refMounted = useRefMounted();
   const [error, setError] = useState<Error | undefined>();

@@ -86,8 +86,11 @@ typings/
 
 # Build folder
 lib/
+esm/
 
 /tmp/
 .DS_Store
 
 /storybook-static
+
+*storybook.log

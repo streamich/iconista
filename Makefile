@@ -160,3 +160,4 @@ build_set_index:
 build_types:
 	@npx rimraf src/types.ts
 	@node scripts/build_types.js
+	@node scripts/build_stories.js

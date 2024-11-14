@@ -1,7 +1,7 @@
 {
   "name": "iconista",
   "version": "2.16.1",
-  "description": "",
+  "description": "Thousands of SVG icons with one React component",
   "types": "lib/index.d.ts",
   "typings": "lib/index.d.ts",
   "author": {
@@ -14,13 +14,16 @@
   "main": "lib/index.js",
   "files": [
     "lib/",
+    "esm/",
     "sets/"
   ],
   "scripts": {
     "start": "yarn storybook",
-    "clean": "rimraf lib tmp storybook-static",
+    "clean": "rimraf lib esm tmp storybook-static",
     "build": "tsc --project tsconfig.build.json",
-    "test": "echo \"no tests\""
+    "test": "echo \"no tests\"",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "keywords": [],
   "dependencies": {
@@ -34,10 +37,19 @@
     "@ant-design/icons": "1.2.1",
     "@atlaskit/icon": "16.0.5",
     "@carbon/icons": "0.0.1-alpha.12",
+    "@chromatic-com/storybook": "^3.2.2",
     "@elastic/eui": "6.10.5",
     "@material-ui/core": "^3.9.2",
     "@pluralsight/ps-design-system-emptystate": "3.0.3",
     "@pluralsight/ps-design-system-icon": "11.2.0",
+    "@storybook/addon-essentials": "^8.4.3",
+    "@storybook/addon-interactions": "^8.4.3",
+    "@storybook/addon-onboarding": "^8.4.3",
+    "@storybook/addon-webpack5-compiler-swc": "^1.0.5",
+    "@storybook/blocks": "^8.4.3",
+    "@storybook/react": "^8.4.3",
+    "@storybook/react-webpack5": "^8.4.3",
+    "@storybook/test": "^8.4.3",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "config-galore": "^1.0.0",
@@ -46,11 +58,11 @@
     "jest": "^24.5.0",
     "libreact": "^2.13.3",
     "mkdirp": "^3.0.1",
-    "nano-theme": "^1.4.3",
-    "notistack": "^3.0.1",
+    "notistack": "^0.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^6.0.1",
+    "storybook": "^8.4.3",
     "svgo": "^3.3.2",
     "typescript": "^5.6.3",
     "url-loader": "^4.1.1"

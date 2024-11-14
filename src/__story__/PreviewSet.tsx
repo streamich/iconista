@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Icon} from '../types';
-import Svg from '..';
+import {Props} from '..';
 import Tooltip from '@material-ui/core/Tooltip';
 import {HoverSensor} from 'libreact/lib/HoverSensor';
 import copy from 'copy-to-clipboard';
@@ -68,7 +68,7 @@ const PreviewIcon: React.FC<Icon & {size?: number; enqueueSnackbar: (text: any) 
 const PreviewIconWithSnackbar = withSnackbar(PreviewIcon as any) as any;
 
 export interface PreviewSetProps {
-  set: string;
+  set: Props['set'];
   icons: string[];
 }
 
