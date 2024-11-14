@@ -1,6 +1,6 @@
 # iconista
 
-- Hundreds 💯+ of SVG icons in one React component
+- Hundreds 💯+ of SVG icons in one React component. [Go to Storybook][storybook]
 - One React component
 - [TypeScript autocompletion](./docs/icon.gif) for icon sets and icons
 - Inlines icons as SVG elements, so you can apply CSS styling to them
@@ -8,8 +8,9 @@
 - `fill` SVG properties are not set, so you can color icons with CSS
 
 
-![image](https://user-images.githubusercontent.com/9773803/55281453-d8aafc80-5334-11e9-88b2-b275e41c9ec6.png)
+[![image](https://user-images.githubusercontent.com/9773803/55281453-d8aafc80-5334-11e9-88b2-b275e41c9ec6.png)][storybook]
 
+[storybook]: https://streamich.github.io/iconista
 
 React usage
 
