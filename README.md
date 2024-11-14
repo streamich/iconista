@@ -12,7 +12,8 @@
 
 [storybook]: https://streamich.github.io/iconista
 
-React usage
+
+## React usage
 
 ```js
 import Svg from 'iconista';
@@ -26,6 +27,30 @@ Or, simply get the icon URL:
 import {getUrl} from 'iconista/lib/getUrl'
 
 const url = getUrl({set: 'ibm_16', icon: 'arrow--down'})
+```
+
+
+## Static usage
+
+You can access icons directly from a public CDN, using icon's `{set}` and
+`{icon}` identifiers. For example, you can use the JsDelivr CDN:
+
+Using [JsDelivr](https://cdn.jsdelivr.net/npm/iconista@2/sets/lucide/beef.svg):
+
+```
+https://cdn.jsdelivr.net/npm/iconista@2/sets/{set}/{icon}.svg
+```
+
+Using [UNPKG](https://unpkg.com/iconista@2/sets/lucide/beef.svg):
+
+```
+https://unpkg.com/iconista@2/sets/{set}/{icon}.svg
+```
+
+Using [ESM.sh](https://esm.sh/iconista@2.18.0/sets/lucide/beef.svg):
+
+```
+https://esm.sh/iconista@2/sets/{set}/{icon}.svg
 ```
 
 
