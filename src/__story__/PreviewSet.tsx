@@ -52,16 +52,18 @@ const PreviewIcon: React.FC<Icon & {size?: number; enqueueSnackbar: (text: any) 
     );
   };
 
+  const H = HoverSensor as any;
+
   return (
-    <HoverSensor>
-      {({isHover}) => (
+    <H>
+      {({isHover}: {isHover: boolean}) => (
         <div style={{...styles.block, border: `1px solid rgba(0,0,0,.${isHover ? 2 : 1})`}} onClick={onClick}>
           <Tooltip title={icon} placement="top">
             <img style={styles.svg} src={getUrl({set: set as any, icon: icon as any})} />
           </Tooltip>
         </div>
       )}
-    </HoverSensor>
+    </H>
   );
 };
 
