@@ -76,6 +76,11 @@ export const ibm_32: Story = {
   render: () => <PreviewSet set={'ibm_32'} icons={require('../../sets/ibm_32')} />,
 };
 
+export const lineicons: Story = {
+  name: 'lineicons',
+  render: () => <PreviewSet set={'lineicons'} icons={require('../../sets/lineicons')} />,
+};
+
 export const lucide: Story = {
   name: 'lucide',
   render: () => <PreviewSet set={'lucide'} icons={require('../../sets/lucide')} />,

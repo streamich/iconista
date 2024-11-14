@@ -160,6 +160,16 @@ lucide:
 	@node -e 'fs.writeFileSync("sets/lucide/index.txt", fs.readdirSync("sets/lucide").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/lucide/index.json", JSON.stringify(fs.readFileSync("sets/lucide/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: lineicons
+lineicons:
+	@npx rimraf tmp/lineicons sets/lineicons
+	@npx mkdirp tmp/lineicons sets/lineicons
+	@find node_modules/lineicons/assets/svgs/regular -maxdepth 1 -type f | xargs -I {} cp {} tmp/lineicons
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/lineicons/*.svg
+	@cp tmp/lineicons/* sets/lineicons
+	@node -e 'fs.writeFileSync("sets/lineicons/index.txt", fs.readdirSync("sets/lineicons").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/lineicons/index.json", JSON.stringify(fs.readFileSync("sets/lineicons/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
