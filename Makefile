@@ -150,6 +150,16 @@ radix:
 	@node -e 'fs.writeFileSync("sets/radix/index.txt", fs.readdirSync("sets/radix").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/radix/index.json", JSON.stringify(fs.readFileSync("sets/radix/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: lucide
+lucide:
+	@npx rimraf tmp/lucide sets/lucide
+	@npx mkdirp tmp/lucide sets/lucide
+	@find node_modules/lucide-static/icons -maxdepth 1 -type f | xargs -I {} cp {} tmp/lucide
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/lucide/*.svg
+	@cp tmp/lucide/* sets/lucide
+	@node -e 'fs.writeFileSync("sets/lucide/index.txt", fs.readdirSync("sets/lucide").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/lucide/index.json", JSON.stringify(fs.readFileSync("sets/lucide/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
