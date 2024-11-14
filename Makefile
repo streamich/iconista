@@ -140,10 +140,20 @@ emojione_v2:
 	@node -e 'fs.writeFileSync("sets/emojione_v2/index.txt", fs.readdirSync("sets/emojione_v2").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/emojione_v2/index.json", JSON.stringify(fs.readFileSync("sets/emojione_v2/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: radix
+radix:
+	@npx rimraf tmp/radix sets/radix
+	@npx mkdirp tmp/radix sets/radix
+	@find raw/radix -maxdepth 1 -type f | xargs -I {} cp {} tmp/radix
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/radix/*.svg
+	@cp tmp/radix/* sets/radix
+	@node -e 'fs.writeFileSync("sets/radix/index.txt", fs.readdirSync("sets/radix").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/radix/index.json", JSON.stringify(fs.readFileSync("sets/radix/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
-	@node -e 'fs.writeFileSync("sets/index.txt", fs.readdirSync("sets").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/index.txt", fs.readdirSync("sets").filter((path) => path[0] !== ".").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/index.json", JSON.stringify(fs.readFileSync("sets/index.txt", "utf8").split("\n"), null, 2))'
 
 .PHONY: build_types
