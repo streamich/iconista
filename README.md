@@ -10,7 +10,7 @@
 - SVG icons are optimized with SVGO.
 
 
-[![image](https://user-images.githubusercontent.com/9773803/55281453-d8aafc80-5334-11e9-88b2-b275e41c9ec6.png)][storybook]
+![autocomplete](https://github.com/streamich/iconista/blob/master/docs/icon.gif)
 
 [storybook]: https://streamich.github.io/iconista
 
