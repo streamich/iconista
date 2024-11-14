@@ -41,4 +41,5 @@ const url = getUrl({set: 'ibm_16', icon: 'arrow--down'})
 - `pluralsight` and `pluralsight_illustrations` icon sets are under [Apache License 2.0 by Pluralsight](https://github.com/pluralsight/design-system/blob/f6e81d360336df88764a517440003355c07f761a/LICENSE).
 - `emojione_v2` icon set is under [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/)
 - `radix` icon set is under [MIT license by WorkOS](https://github.com/radix-ui/icons/blob/237cd76c007a573c2a6f6caabe9ea3de81393f50/LICENSE)
+- `lucide` icon set is under [ISC and MIT licenses](https://github.com/lucide-icons/lucide/blob/1eee03451a5447069aceaaafbb1967fc78670bf8/LICENSE)
 - This project is under [Unlicense](LICENSE) license &mdash; public domain.
