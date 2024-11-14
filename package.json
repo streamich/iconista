@@ -23,7 +23,7 @@
     "build": "tsc --project tsconfig.build.json",
     "test": "echo \"no tests\"",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook:build": "storybook build"
   },
   "keywords": [],
   "dependencies": {
