@@ -190,6 +190,16 @@ tabler_filled:
 	@node -e 'fs.writeFileSync("sets/tabler_filled/index.txt", fs.readdirSync("sets/tabler_filled").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/tabler_filled/index.json", JSON.stringify(fs.readFileSync("sets/tabler_filled/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: simple
+simple:
+	@npx rimraf tmp/simple sets/simple
+	@npx mkdirp tmp/simple sets/simple
+	@find node_modules/simple-icons/icons -maxdepth 1 -type f | xargs -I {} cp {} tmp/simple
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/simple/*.svg
+	@cp tmp/simple/* sets/simple
+	@node -e 'fs.writeFileSync("sets/simple/index.txt", fs.readdirSync("sets/simple").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/simple/index.json", JSON.stringify(fs.readFileSync("sets/simple/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*

@@ -101,6 +101,11 @@ export const radix: Story = {
   render: () => <PreviewSet set={'radix'} icons={require('../../sets/radix')} />,
 };
 
+export const simple: Story = {
+  name: 'simple',
+  render: () => <PreviewSet set={'simple'} icons={require('../../sets/simple')} />,
+};
+
 export const tabler: Story = {
   name: 'tabler',
   render: () => <PreviewSet set={'tabler'} icons={require('../../sets/tabler')} />,
