@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "tslint-config-common"
-  ],
-  "rules": {
-    "only-arrow-functions": false
-  }
-}
