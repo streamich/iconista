@@ -656,14 +656,14 @@
     fast-memoize "^2.5.1"
     react-html-attributes "^1.4.6"
 
-"@pluralsight/ps-design-system-icon@11.2.0":
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-icon/-/ps-design-system-icon-11.2.0.tgz#c862650c46f7fbe9fcaf7c3f816bb1615441c999"
-  integrity sha512-nCVB194X7Ez0w6O3mDpRLLoCCOTLql0rocu9FVSxU5sljalOFQ+ICSaN77NW4TLz5ldqlInK1oL9hLdg0tQnUQ==
+"@pluralsight/ps-design-system-icon@11.2.2":
+  version "11.2.2"
+  resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-icon/-/ps-design-system-icon-11.2.2.tgz#d704314a054bb18f324a0f6ae8cadc2b35b2c40d"
+  integrity sha512-kWCgwZ9GhgaEfSXDzVExhjSZeRtW/l1UPfL+IKXcv3TPBeryVyXSCPdHByXTWawLb9CqWpffnEZMwfRoPgfpBA==
   dependencies:
     "@pluralsight/ps-design-system-core" "^4.4.2"
     "@pluralsight/ps-design-system-filter-react-props" "^1.1.3"
-    prop-types "^15.5.10"
+    prop-types "^15.7.0"
 
 "@pluralsight/ps-design-system-prop-types@^2.0.3":
   version "2.1.1"
