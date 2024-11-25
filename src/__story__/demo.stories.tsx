@@ -41,6 +41,11 @@ export const auth0: Story = {
   render: () => <PreviewSet set={'auth0'} icons={require('../../sets/auth0')} />,
 };
 
+export const bootstrap: Story = {
+  name: 'bootstrap',
+  render: () => <PreviewSet set={'bootstrap'} icons={require('../../sets/bootstrap')} />,
+};
+
 export const elastic: Story = {
   name: 'elastic',
   render: () => <PreviewSet set={'elastic'} icons={require('../../sets/elastic')} />,

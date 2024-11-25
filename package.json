@@ -27,6 +27,7 @@
   },
   "keywords": [],
   "dependencies": {
+    "bootstrap-icons": "^1.11.3",
     "react-use": "^5.7.1"
   },
   "peerDependencies": {

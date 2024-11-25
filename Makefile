@@ -220,6 +220,16 @@ vscode_dark:
 	@node -e 'fs.writeFileSync("sets/vscode_dark/index.txt", fs.readdirSync("sets/vscode_dark").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/vscode_dark/index.json", JSON.stringify(fs.readFileSync("sets/vscode_dark/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: bootstrap
+bootstrap:
+	@npx rimraf tmp/bootstrap sets/bootstrap
+	@npx mkdirp tmp/bootstrap sets/bootstrap
+	@find node_modules/bootstrap-icons/icons -maxdepth 1 -type f | xargs -I {} cp {} tmp/bootstrap
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/bootstrap/*.svg
+	@cp tmp/bootstrap/* sets/bootstrap
+	@node -e 'fs.writeFileSync("sets/bootstrap/index.txt", fs.readdirSync("sets/bootstrap").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/bootstrap/index.json", JSON.stringify(fs.readFileSync("sets/bootstrap/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
