@@ -76,4 +76,5 @@ licenses:
 - `tabler` and `tabler_filled` icon sets are under [MIT license](https://github.com/tabler/tabler-icons/blob/e54656d27e9682d61482626bf9f4d093928b7c95/LICENSE).
 - `simple` icon set is under [CC0 1.0 Universal license](https://github.com/simple-icons/simple-icons/blob/ac87321562995f2e55272ac06b5e68308edb6c0b/LICENSE.md).
 - `vscode` and `vscode_dark` icon sets are under [CC Attribution 4.0 International](https://github.com/microsoft/vscode-icons/blob/2ca0f3225c1ecd16537107f60f109317fcfc3eb0/LICENSE).
+- `bootstrap` icon set is under [MIT license](https://github.com/twbs/icons/blob/dfc7bdc1bf536ac631ec12c8592e4d7bcd1d0ee9/LICENSE).
 - This project is under [Unlicense](LICENSE) license &mdash; public domain.
