@@ -1,5 +1,9 @@
 # iconista
 
+Listen to podcast:
+
+https://github.com/user-attachments/assets/aadf4d0e-39d9-4214-8a61-4876989d558a
+
 - Thousands of SVG icons. [See to Storybook][storybook].
 - Just one React component.
 - Icons are lazy-loaded, so you only load the icons you use.
