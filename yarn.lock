@@ -191,10 +191,10 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
-"@carbon/icons@0.0.1-alpha.12":
-  version "0.0.1-alpha.12"
-  resolved "https://registry.yarnpkg.com/@carbon/icons/-/icons-0.0.1-alpha.12.tgz#edcfca9a7a416502a1da44015333de2666948de5"
-  integrity sha512-PzKedET8LsimxLnyVP772600PQ2MwumQbfwgaNmLxMbZP/NU4bzvb3AuW1mhpqD9OTYx62FCmQ0Xw7K7GcuAqQ==
+"@carbon/icons@0.0.1-beta.5":
+  version "0.0.1-beta.5"
+  resolved "https://registry.yarnpkg.com/@carbon/icons/-/icons-0.0.1-beta.5.tgz#74122482062e7590a1283601e8257bed5557c886"
+  integrity sha512-7Z/s1EoAImVfZxA2GBm5fCGsjMnbTJIp2qnlp14E0JRCqIZ3J0Az3b014yU5CzfFk8BaIMuFjuwnI1h17tkaew==
 
 "@chromatic-com/storybook@^3.2.2":
   version "3.2.2"
