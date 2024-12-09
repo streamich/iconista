@@ -191,10 +191,12 @@
     "@babel/helper-string-parser" "^7.25.9"
     "@babel/helper-validator-identifier" "^7.25.9"
 
-"@carbon/icons@0.0.1-alpha.12":
-  version "0.0.1-alpha.12"
-  resolved "https://registry.yarnpkg.com/@carbon/icons/-/icons-0.0.1-alpha.12.tgz#edcfca9a7a416502a1da44015333de2666948de5"
-  integrity sha512-PzKedET8LsimxLnyVP772600PQ2MwumQbfwgaNmLxMbZP/NU4bzvb3AuW1mhpqD9OTYx62FCmQ0Xw7K7GcuAqQ==
+"@carbon/icons@11.53.0":
+  version "11.53.0"
+  resolved "https://registry.yarnpkg.com/@carbon/icons/-/icons-11.53.0.tgz#511fe8be40ee9dc611859ec6dfe97d462d956cf8"
+  integrity sha512-hX9jt/bTz0Hkfh0eKQ2AiXZ/rRu8o8ZGAQyeWnQcWtmKJ/X90+JQX71Nho88Alwjoi1IKdEdSRnzN+9sTvmuQA==
+  dependencies:
+    "@ibm/telemetry-js" "^1.5.0"
 
 "@chromatic-com/storybook@^3.2.2":
   version "3.2.2"
@@ -360,6 +362,11 @@
   version "0.24.0"
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.24.0.tgz#168ab1c7e1c318b922637fad8f339d48b01e1244"
   integrity sha512-7IAFPrjSQIJrGsK6flwg7NFmwBoSTyF3rl7If0hNUFQU4ilTsEPL6GuMuU9BfIWVVGuRnuIidkSMC+c0Otu8IA==
+
+"@ibm/telemetry-js@^1.5.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@ibm/telemetry-js/-/telemetry-js-1.8.0.tgz#d6220d1772d8ea8339aff79340e9591461be5d27"
+  integrity sha512-1u/8f5TtDHXWNQe+YfIESesZGX2PmhEfyU0znlyFvATch+xc5fPYjXj2gWKMTmdKsDawqAm/BkJBQjx2CDlZww==
 
 "@icons/material@^0.2.4":
   version "0.2.4"
