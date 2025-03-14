@@ -6,20 +6,6 @@ import useRefMounted from 'react-use/lib/useRefMounted';
 const {useEffect, useState, useRef} = React;
 const cache: {[key: string]: Document} = {};
 
-const loadDoc = (url: string) =>
-  new Promise((resolve, reject) => {
-    const req = new XMLHttpRequest();
-    req.onreadystatechange = () => {
-      const {readyState, status, responseXML: doc} = req;
-      if (readyState !== 4) return;
-      if (status !== 200) return reject(new Error(`SVG loading HTTP ${status} error: ${url}`));
-      if (!doc!) return reject(new Error(`Could not load SVG Document: ${url}`));
-      resolve(doc!);
-    };
-    req.open('GET', url, true);
-    req.send();
-  });
-
 export type Props = Icon &
   React.SVGAttributes<any> & {
     getUrl?: (icon: Icon) => string;
@@ -52,16 +38,18 @@ const Svg: React.FC<Props> = ({set, icon, getUrl = getUrlDefault, ...rest}) => {
     if (cache[key]) applyDoc(cache[key]);
     else {
       const url = getUrl({set, icon} as Icon);
-      loadDoc(url).then(
-        (doc: any) => {
+      fetch(url, {cache: 'force-cache'})
+        .then(r => r.text())
+        .then(text => {
           if (!refMounted.current) return;
-          applyDoc((cache[key] = doc!));
-        },
-        (error) => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(text, 'application/xml');
+          applyDoc((cache[key] = doc));
+        })
+        .catch((error) => {
           if (!refMounted.current) return;
           setError(error);
-        },
-      );
+        });
     }
   }, [set, icon]);
 

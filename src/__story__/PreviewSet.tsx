@@ -5,7 +5,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import {HoverSensor} from 'libreact/lib/HoverSensor';
 import copy from 'copy-to-clipboard';
 import {SnackbarProvider, withSnackbar} from 'notistack';
-import {getUrl} from '../getUrl';
+import Component from '..';
 
 const styles = {
   set: {
@@ -59,7 +59,7 @@ const PreviewIcon: React.FC<Icon & {size?: number; enqueueSnackbar: (text: any) 
       {({isHover}: {isHover: boolean}) => (
         <div style={{...styles.block, border: `1px solid rgba(0,0,0,.${isHover ? 2 : 1})`}} onClick={onClick}>
           <Tooltip title={icon} placement="top">
-            <img style={styles.svg} src={getUrl({set: set as any, icon: icon as any})} />
+            <Component style={styles.svg} set={set as any} icon={icon as any} />
           </Tooltip>
         </div>
       )}
