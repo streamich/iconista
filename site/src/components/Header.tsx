@@ -42,27 +42,29 @@ export function Header({
   return (
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-white/80 dark:bg-gray-950/80 border-b border-gray-200 dark:border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-4 h-16">
-          {/* Logo / Back */}
-          <button
-            onClick={onBack}
-            className="flex items-center gap-2.5 shrink-0 group"
-          >
-            {activeSet && (
-              <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            )}
-            <span className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Iconista
-            </span>
-            <span className="hidden sm:inline text-xs font-medium text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded-full">
-              {totalIcons.toLocaleString()} icons
-            </span>
-          </button>
+        <div className="flex items-center h-16">
+          {/* Left: Logo / Back */}
+          <div className="flex-1 flex items-center min-w-0">
+            <button
+              onClick={onBack}
+              className="flex items-center gap-2.5 shrink-0 group"
+            >
+              {activeSet && (
+                <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              )}
+              <span className="text-xl font-bold text-gray-800 dark:text-gray-100">
+                Iconista
+              </span>
+              <span className="hidden sm:inline text-xs font-medium text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-800 px-2 py-0.5 rounded-full">
+                {totalIcons.toLocaleString()} icons
+              </span>
+            </button>
+          </div>
 
-          {/* Search */}
-          <div className="flex-1 max-w-xl">
+          {/* Center: Search */}
+          <div className="w-full max-w-xl mx-4">
             <div className="relative">
               <svg
                 className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
@@ -79,7 +81,7 @@ export function Header({
                 value={query}
                 onChange={(e) => onQueryChange(e.target.value)}
                 placeholder="Search icons..."
-                className="w-full pl-10 pr-10 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-400 dark:focus:border-indigo-600 transition-all"
+                className="w-full pl-10 pr-10 py-2 rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-400/40 focus:border-gray-400 dark:focus:border-gray-500 transition-all"
               />
               {query ? (
                 <button
@@ -98,8 +100,8 @@ export function Header({
             </div>
           </div>
 
-          {/* Actions */}
-          <div className="flex items-center gap-2 shrink-0">
+          {/* Right: Actions */}
+          <div className="flex-1 flex items-center justify-end gap-2 min-w-0">
             <a
               href="https://github.com/streamich/iconista"
               target="_blank"

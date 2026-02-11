@@ -103,7 +103,7 @@ export default function App() {
               </div>
               <button
                 onClick={handleBack}
-                className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 transition-colors"
+                className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 transition-colors"
               >
                 All sets
               </button>
@@ -123,7 +123,7 @@ export default function App() {
             {/* Hero */}
             <div className="text-center mb-12 pt-8">
               <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-gray-100 tracking-tight">
-                <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <span className="text-gray-900 dark:text-white">
                   {data.totalIcons.toLocaleString()}
                 </span>{' '}
                 beautiful icons

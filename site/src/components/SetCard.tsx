@@ -28,7 +28,7 @@ export function SetCard({ set, onClick }: SetCardProps) {
       {/* Set info */}
       <div className="flex items-end justify-between">
         <div>
-          <h3 className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+          <h3 className="font-semibold text-gray-900 dark:text-gray-100 group-hover:text-gray-700 dark:group-hover:text-white transition-colors">
             {set.displayName}
           </h3>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-0.5">
@@ -36,7 +36,7 @@ export function SetCard({ set, onClick }: SetCardProps) {
           </p>
         </div>
         <svg
-          className="w-5 h-5 text-gray-300 dark:text-gray-600 group-hover:text-indigo-500 group-hover:translate-x-0.5 transition-all"
+          className="w-5 h-5 text-gray-300 dark:text-gray-600 group-hover:text-gray-500 dark:group-hover:text-gray-400 group-hover:translate-x-0.5 transition-all"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -47,7 +47,7 @@ export function SetCard({ set, onClick }: SetCardProps) {
       </div>
 
       {/* Subtle gradient overlay on hover */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-50/0 to-purple-50/0 group-hover:from-indigo-50/50 group-hover:to-purple-50/50 dark:group-hover:from-indigo-950/20 dark:group-hover:to-purple-950/20 transition-all duration-300 pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gray-50/0 to-gray-100/0 group-hover:from-gray-50/50 group-hover:to-gray-100/50 dark:group-hover:from-gray-800/20 dark:group-hover:to-gray-700/20 transition-all duration-300 pointer-events-none" />
     </div>
   );
 }
