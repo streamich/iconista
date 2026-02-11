@@ -6,6 +6,7 @@ interface SearchResultsProps {
   manifest: Manifest;
   query: string;
   onSelect: (icon: SelectedIcon) => void;
+  onNavigateToSet: (setName: string) => void;
 }
 
 interface SearchResult {
@@ -14,18 +15,52 @@ interface SearchResult {
   icons: string[];
 }
 
-export function SearchResults({ manifest, query, onSelect }: SearchResultsProps) {
+/**
+ * Escape special regex characters in a string.
+ */
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * Build a fuzzy regex from a query string.
+ * Each character can be separated by up to 2 arbitrary characters.
+ * E.g. "frk" => /f.{0,2}r.{0,2}k/i  which matches "fork".
+ */
+function buildFuzzyRegex(q: string): RegExp | null {
+  if (!q) return null;
+  const chars = [...q].map(escapeRegex);
+  const pattern = chars.join('.{0,2}');
+  try {
+    return new RegExp(pattern, 'i');
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Check if a string matches the query — first tries exact substring match,
+ * then falls back to fuzzy regex.
+ */
+function matchesQuery(text: string, q: string, fuzzyRe: RegExp | null): boolean {
+  if (text.toLowerCase().includes(q)) return true;
+  if (fuzzyRe && fuzzyRe.test(text)) return true;
+  return false;
+}
+
+export function SearchResults({ manifest, query, onSelect, onNavigateToSet }: SearchResultsProps) {
   const results = useMemo(() => {
     const q = query.toLowerCase().trim();
     if (!q) return [];
 
+    const fuzzyRe = buildFuzzyRegex(q);
     const out: SearchResult[] = [];
 
     for (const set of manifest.sets) {
       // Check if query matches set name
       const setMatches =
-        set.name.toLowerCase().includes(q) ||
-        set.displayName.toLowerCase().includes(q);
+        matchesQuery(set.name, q, fuzzyRe) ||
+        matchesQuery(set.displayName, q, fuzzyRe);
 
       if (setMatches) {
         // Show all icons in matching set
@@ -35,9 +70,9 @@ export function SearchResults({ manifest, query, onSelect }: SearchResultsProps)
           icons: set.icons,
         });
       } else {
-        // Filter icons by name
+        // Filter icons by name (fuzzy)
         const matchingIcons = set.icons.filter((icon) =>
-          icon.toLowerCase().includes(q)
+          matchesQuery(icon, q, fuzzyRe)
         );
         if (matchingIcons.length > 0) {
           out.push({
@@ -76,8 +111,13 @@ export function SearchResults({ manifest, query, onSelect }: SearchResultsProps)
 
       {results.map((result) => (
         <div key={result.setName}>
-          <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
-            {result.setDisplayName}
+          <h3 className="text-sm font-semibold mb-3 flex items-center gap-2">
+            <button
+              onClick={() => onNavigateToSet(result.setName)}
+              className="text-gray-900 dark:text-gray-100 hover:underline cursor-pointer"
+            >
+              {result.setDisplayName}
+            </button>
             <span className="text-xs font-normal text-gray-400 dark:text-gray-500">
               {result.icons.length.toLocaleString()} match{result.icons.length !== 1 ? 'es' : ''}
             </span>

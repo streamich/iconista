@@ -64,6 +64,11 @@ export default function App() {
     setSelectedIcon(icon);
   }, []);
 
+  const handleNavigateToSet = useCallback((setName: string) => {
+    const set = setMap.get(setName);
+    if (set) handleSelectSet(set);
+  }, [handleSelectSet]);
+
   const isSearching = query.length > 0;
   const hasResults = debouncedQuery.length > 0;
 
@@ -86,6 +91,7 @@ export default function App() {
             manifest={data}
             query={debouncedQuery}
             onSelect={handleSelectIcon}
+            onNavigateToSet={handleNavigateToSet}
           />
         )}
 
@@ -158,10 +164,10 @@ export default function App() {
               {/* npm install */}
               <div className="mt-6 inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-gray-900 dark:bg-gray-800 text-gray-300 text-sm font-mono shadow-lg">
                 <span className="text-green-400 select-none">$</span>
-                <span>npm install iconista</span>
+                <span>npm i iconista</span>
                 <button
                   onClick={() => {
-                    navigator.clipboard.writeText('npm install iconista');
+                    navigator.clipboard.writeText('npm i iconista');
                     showToast('Command copied!');
                   }}
                   className="ml-1 p-1 rounded-md text-gray-500 hover:text-gray-300 hover:bg-gray-700 transition-colors"

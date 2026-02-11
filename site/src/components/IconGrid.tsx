@@ -63,7 +63,7 @@ export function IconGrid({ setName, setDisplayName, icons, onSelect }: IconGridP
               className="w-6 h-6 sm:w-7 sm:h-7"
             />
             {/* Tooltip */}
-            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 rounded-md bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-[10px] font-medium whitespace-nowrap opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none z-10 shadow-lg">
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 px-2 py-1 rounded-md bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-[10px] font-medium whitespace-nowrap opacity-0 group-hover/icon:opacity-100 transition-opacity pointer-events-none z-20 shadow-lg">
               {icon}
             </div>
           </button>
