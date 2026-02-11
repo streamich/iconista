@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    @apply bg-indigo-200 dark:bg-indigo-800;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-700 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+}
+
+@layer components {
+  .icon-card {
+    @apply relative flex items-center justify-center rounded-xl border border-gray-200 dark:border-gray-800
+           bg-white dark:bg-gray-900 cursor-pointer
+           transition-all duration-200 ease-out
+           hover:border-indigo-300 dark:hover:border-indigo-700
+           hover:shadow-lg hover:shadow-indigo-100 dark:hover:shadow-indigo-950
+           hover:-translate-y-0.5;
+  }
+
+  .copy-btn {
+    @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium
+           border border-gray-200 dark:border-gray-700
+           bg-white dark:bg-gray-800
+           hover:bg-gray-50 dark:hover:bg-gray-700
+           active:scale-95 transition-all duration-150;
+  }
+
+  .set-card {
+    @apply relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800
+           bg-white dark:bg-gray-900 p-6 cursor-pointer
+           transition-all duration-300 ease-out
+           hover:border-indigo-300 dark:hover:border-indigo-700
+           hover:shadow-xl hover:shadow-indigo-100/50 dark:hover:shadow-indigo-950/50
+           hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
