@@ -19,10 +19,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: yarn
-      - run: yarn
-      - run: yarn storybook:build --quiet
+      - run: yarn --cwd site
+      - run: yarn --cwd site build
       - name: Publish to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook-static
+          publish_dir: ./site/dist
