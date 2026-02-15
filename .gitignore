@@ -94,3 +94,5 @@ esm/
 /storybook-static
 
 *storybook.log
+
+/site/tsconfig.tsbuildinfo
