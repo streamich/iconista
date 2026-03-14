@@ -625,30 +625,27 @@
   dependencies:
     "@types/mdx" "^2.0.0"
 
-"@pluralsight/ps-design-system-core@4.4.0":
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-core/-/ps-design-system-core-4.4.0.tgz#6e1968cc757aed22b6c3e1b0ec01196f8629e708"
-  integrity sha512-nFV6X4rg/1QfB00TDHoUhlUJ0sK2o7drYCzughi8suuFjEOWi6zkRKnrCZ8kI7/VLXHUs9uZXfbSik7SwyCunQ==
+"@pluralsight/ps-design-system-core@^10.0.4":
+  version "10.0.4"
+  resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-core/-/ps-design-system-core-10.0.4.tgz#f92345a72e1f3fdae991d19014c6ca41389555e8"
+  integrity sha512-F4Uo+naIC+9MYHDqmRYbxR0GYKI8lYn07iy0K7jy+4Ttj0Y0uRgh+xiOyUddPOCkvBTJ4Mv3/BlLT6wv2/8O/A==
+  dependencies:
+    "@pluralsight/ps-design-system-util" "^10.1.3"
 
 "@pluralsight/ps-design-system-core@^4.4.2":
   version "4.4.5"
   resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-core/-/ps-design-system-core-4.4.5.tgz#734a2fa07a9593c5132e4fe0acbfb109004597c9"
   integrity sha512-tHBwjQ2N6/g1nJjJnMq1LSZRpvylWZuLcnOIAfMKOLSXt5suncz0ZmA/upJBqSTEL4iwCmOAKVoR3g/voyedtQ==
 
-"@pluralsight/ps-design-system-emptystate@3.0.9":
-  version "3.0.9"
-  resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-emptystate/-/ps-design-system-emptystate-3.0.9.tgz#e7126c87334b6c4bb9ff2dc1d3bbd119dc4a0a41"
-  integrity sha512-T7ijXFQZleahKu//hCSkJIBuFEmnDEa2Z4/foMjY7t3VENH7Yafu4hMHLkSCsP/agZfarBbRnj3uqhlMZbARJg==
+"@pluralsight/ps-design-system-emptystate@14.1.2":
+  version "14.1.2"
+  resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-emptystate/-/ps-design-system-emptystate-14.1.2.tgz#dec0dbd723880a5396a56c1f4d021584cf9d95c3"
+  integrity sha512-kRT6K3FDrZLD3c5xe/1WUZXqnhfqxqrP9+Ueafnl9OdBX3scFmnCD4Cd/HCLcSShAWzkNWY+Sb/Cm4muPRJk7w==
   dependencies:
-    "@pluralsight/ps-design-system-core" "4.4.0"
-    "@pluralsight/ps-design-system-filter-react-props" "^1.1.1"
-    "@pluralsight/ps-design-system-prop-types" "^2.0.3"
-    "@pluralsight/ps-design-system-theme" "1.4.1"
-    create-react-context "^0.2.3"
-    prop-types "^15.7.0"
-    resize-observer-polyfill "^1.5.1"
+    "@pluralsight/ps-design-system-core" "^10.0.4"
+    "@pluralsight/ps-design-system-util" "^10.1.3"
 
-"@pluralsight/ps-design-system-filter-react-props@^1.1.1", "@pluralsight/ps-design-system-filter-react-props@^1.1.3":
+"@pluralsight/ps-design-system-filter-react-props@^1.1.3":
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-filter-react-props/-/ps-design-system-filter-react-props-1.2.1.tgz#ae527ca33afc54b3123a9a6b5d316ad6439b0db6"
   integrity sha512-h7Rm8CiK8Fz7j3ja8Qxieonrvs09pD/zU4itSdoqau37yec1h7TNFDuTqFFJMOqmBLtrABiKaB+07hrXJF6ugg==
@@ -665,19 +662,13 @@
     "@pluralsight/ps-design-system-filter-react-props" "^1.1.3"
     prop-types "^15.7.0"
 
-"@pluralsight/ps-design-system-prop-types@^2.0.3":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-prop-types/-/ps-design-system-prop-types-2.1.1.tgz#e2416f82602c17c22590e0c5c8fb89dacbfa5c04"
-  integrity sha512-5xtFvrzJiU0mqrz4bCX3jQ4igOpM28LGrQRjpH0wpWqMldLNRQoWWWI6Z0gz1YWdkGqpDq3TIX56qfQOED2N3A==
+"@pluralsight/ps-design-system-util@^10.1.3":
+  version "10.1.3"
+  resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-util/-/ps-design-system-util-10.1.3.tgz#e583f20b4835d9cc3c7fec6a740bd812399deeca"
+  integrity sha512-NiJC0YdIKrKWzJx0oTvYAg7FB7YZPKw4nrpgD3WicUQa+gfw1M388FIOOg/GkSuMnRXQ3//jgQb22qTSTTvUww==
   dependencies:
-    prop-types "^15.7.2"
-
-"@pluralsight/ps-design-system-theme@1.4.1":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@pluralsight/ps-design-system-theme/-/ps-design-system-theme-1.4.1.tgz#e75701014efb6d7ecb6f0e5a73f8c4e6a4fc0bbf"
-  integrity sha512-YNqGmlnPEWHrtC9eAT2Z5SY4sFZcepT2giLjCiGmxD8VOL6DTVFLp146uEhIBH+HsFLNqAMEjXJIALZ97QLC0w==
-  dependencies:
-    prop-types "^15.5.10"
+    exenv "^1.2.2"
+    resize-observer-polyfill "^1.5.1"
 
 "@storybook/addon-actions@8.4.3":
   version "8.4.3"
@@ -2410,14 +2401,6 @@ cosmiconfig@^7.0.1:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
-create-react-context@^0.2.3:
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/create-react-context/-/create-react-context-0.2.3.tgz#9ec140a6914a22ef04b8b09b7771de89567cb6f3"
-  integrity sha512-CQBmD0+QGgTaxDL3OX1IDXYqjkp2It4RIbcb99jS6AEg27Ga+a9G3JtK6SIu0HBwPLZlmwt9F7UwWA4Bn92Rag==
-  dependencies:
-    fbjs "^0.8.0"
-    gud "^1.0.0"
-
 cross-spawn@^6.0.0:
   version "6.0.5"
   resolved "https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz#4a5ec7c64dfae22c3a14124dbacdee846d80cbc4"
@@ -3441,7 +3424,7 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.9:
+fbjs@^0.8.1, fbjs@^0.8.9:
   version "0.8.18"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.18.tgz#9835e0addb9aca2eff53295cd79ca1cfc7c9662a"
   integrity sha512-EQaWFK+fEPSoibjNy8IxUtaFOMXcWsY0JaVrQoZR9zC8N2Ygf9iDITPWjUTVIax95b6I742JFLqASHfsag/vKA==
@@ -3779,11 +3762,6 @@ growly@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/growly/-/growly-1.3.0.tgz#f10748cbe76af964b7c96c93c6bcc28af120c081"
   integrity sha512-+xGQY0YyAWCnqy7Cd++hc2JqMYzlm0dG30Jd0beaA64sROr8C4nt8Yc9V5Ro3avlSUDTN0ulqP/VBKi1/lLygw==
-
-gud@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
-  integrity sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
 
 har-schema@^2.0.0:
   version "2.0.0"
@@ -6992,7 +6970,7 @@ string-length@^2.0.0:
     astral-regex "^1.0.0"
     strip-ansi "^4.0.0"
 
-"string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+"string-width-cjs@npm:string-width@^4.2.0":
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -7009,6 +6987,15 @@ string-width@^3.0.0, string-width@^3.1.0:
     emoji-regex "^7.0.1"
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^5.1.0"
+
+string-width@^4.1.0:
+  version "4.2.3"
+  resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
+  integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
+  dependencies:
+    emoji-regex "^8.0.0"
+    is-fullwidth-code-point "^3.0.0"
+    strip-ansi "^6.0.1"
 
 string-width@^5.0.1, string-width@^5.1.2:
   version "5.1.2"
@@ -7054,7 +7041,7 @@ string_decoder@~1.1.1:
   dependencies:
     safe-buffer "~5.1.0"
 
-"strip-ansi-cjs@npm:strip-ansi@^6.0.1", strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+"strip-ansi-cjs@npm:strip-ansi@^6.0.1":
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
   integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
@@ -7074,6 +7061,13 @@ strip-ansi@^5.0.0, strip-ansi@^5.1.0, strip-ansi@^5.2.0:
   integrity sha512-DuRs1gKbBqsMKIZlrffwlug8MHkcnpjs5VPmL1PAh+mA30U0DTotfDZ0d2UUsXpPmPmMMJ6W773MaA3J+lbiWA==
   dependencies:
     ansi-regex "^4.1.0"
+
+strip-ansi@^6.0.0, strip-ansi@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/strip-ansi/-/strip-ansi-6.0.1.tgz#9e26c63d30f53443e9489495b2105d37b67a85d9"
+  integrity sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==
+  dependencies:
+    ansi-regex "^5.0.1"
 
 strip-ansi@^7.0.1, strip-ansi@^7.1.0:
   version "7.1.0"

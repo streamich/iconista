@@ -41,7 +41,7 @@
     "@chromatic-com/storybook": "^3.2.2",
     "@elastic/eui": "6.10.9",
     "@material-ui/core": "^3.9.2",
-    "@pluralsight/ps-design-system-emptystate": "3.0.9",
+    "@pluralsight/ps-design-system-emptystate": "14.1.2",
     "@pluralsight/ps-design-system-icon": "11.2.2",
     "@storybook/addon-essentials": "^8.4.3",
     "@storybook/addon-interactions": "^8.4.3",
