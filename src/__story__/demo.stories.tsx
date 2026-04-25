@@ -36,6 +36,11 @@ export const atlaskit: Story = {
   render: () => <PreviewSet set={'atlaskit'} icons={require('../../sets/atlaskit')} />,
 };
 
+export const atlaskit_34: Story = {
+  name: 'atlaskit_34',
+  render: () => <PreviewSet set={'atlaskit_34'} icons={require('../../sets/atlaskit_34')} />,
+};
+
 export const auth0: Story = {
   name: 'auth0',
   render: () => <PreviewSet set={'auth0'} icons={require('../../sets/auth0')} />,
