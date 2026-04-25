@@ -76,6 +76,7 @@ licenses:
 - `emojione_v2` icon set is under [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
 - `radix` icon set is under [MIT license by WorkOS](https://github.com/radix-ui/icons/blob/237cd76c007a573c2a6f6caabe9ea3de81393f50/LICENSE).
 - `lucide` icon set is under [ISC and MIT licenses](https://github.com/lucide-icons/lucide/blob/1eee03451a5447069aceaaafbb1967fc78670bf8/LICENSE).
+- `lucide_v1` icon set is under [ISC and MIT licenses](https://github.com/lucide-icons/lucide/blob/1675213eb6b8080674c9e4dfdbc93b3944bb46cb/LICENSE).
 - `lineicons` icon set is under [MIT licenses](https://github.com/LineiconsHQ/Lineicons/blob/2630a45a259164dea83497d6dfeb9050c054fc22/LICENSE.md).
 - `tabler` and `tabler_filled` icon sets are under [MIT license](https://github.com/tabler/tabler-icons/blob/e54656d27e9682d61482626bf9f4d093928b7c95/LICENSE).
 - `simple` icon set is under [CC0 1.0 Universal license](https://github.com/simple-icons/simple-icons/blob/ac87321562995f2e55272ac06b5e68308edb6c0b/LICENSE.md).
