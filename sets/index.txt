@@ -13,6 +13,7 @@ ibm_16
 ibm_32
 lineicons
 lucide
+lucide_v1
 pluralsight
 pluralsight_illustrations
 radix
