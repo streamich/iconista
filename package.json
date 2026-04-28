@@ -20,7 +20,7 @@
   "scripts": {
     "start": "yarn storybook",
     "clean": "rimraf lib esm tmp storybook-static",
-    "build": "tsc --project tsconfig.build.json",
+    "build": "node scripts/build_types.js && tsc --project tsconfig.build.json",
     "test": "echo \"no tests\"",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build"
