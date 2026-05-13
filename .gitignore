@@ -97,3 +97,4 @@ esm/
 
 site/browser-test-screenshots/
 site/package-lock.json
+/site/tsconfig.tsbuildinfo

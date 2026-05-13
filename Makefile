@@ -32,12 +32,41 @@ elastic:
 atlaskit:
 	@npx rimraf tmp/atlaskit sets/atlaskit
 	@npx mkdirp tmp/atlaskit sets/atlaskit
-	@find node_modules/@atlaskit/icon/svgs -maxdepth 1 -type f | xargs -I {} cp {} tmp/atlaskit
+	@find node_modules/@atlaskit/icon/svgs -type f | while read file; do \
+		relpath=$$(echo $$file | sed 's|node_modules/@atlaskit/icon/svgs/||'); \
+		dirname=$$(dirname $$relpath); \
+		filename=$$(basename $$relpath); \
+		if [ "$$dirname" = "." ]; then \
+			cp $$file tmp/atlaskit/; \
+		else \
+			cp $$file "tmp/atlaskit/$${dirname}__$${filename}"; \
+		fi; \
+	done
 	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/atlaskit/*.svg
 	@cp tmp/atlaskit/* sets/atlaskit
 	@node -e 'fs.writeFileSync("sets/atlaskit/index.txt", fs.readdirSync("sets/atlaskit").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/atlaskit/index.json", JSON.stringify(fs.readFileSync("sets/atlaskit/index.txt", "utf8").split("\n"), null, 2))'
 	@node scripts/atlaskit_add_xmlns.js
+
+.PHONY: atlaskit_34
+atlaskit_34:
+	@npx rimraf tmp/atlaskit_34 sets/atlaskit_34
+	@npx mkdirp tmp/atlaskit_34 sets/atlaskit_34
+	@find node_modules/atlaskit_34/svgs -type f | while read file; do \
+		relpath=$$(echo $$file | sed 's|node_modules/atlaskit_34/svgs/||'); \
+		dirname=$$(dirname $$relpath); \
+		filename=$$(basename $$relpath); \
+		if [ "$$dirname" = "." ]; then \
+			cp $$file tmp/atlaskit_34/; \
+		else \
+			cp $$file "tmp/atlaskit_34/$${dirname}__$${filename}"; \
+		fi; \
+	done
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/atlaskit_34/*.svg
+	@cp tmp/atlaskit_34/* sets/atlaskit_34
+	@node -e 'fs.writeFileSync("sets/atlaskit_34/index.txt", fs.readdirSync("sets/atlaskit_34").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/atlaskit_34/index.json", JSON.stringify(fs.readFileSync("sets/atlaskit_34/index.txt", "utf8").split("\n"), null, 2))'
+	@node scripts/atlaskit_34_add_xmlns.js
 
 .PHONY: ant_outline
 ant_outline:
@@ -159,6 +188,16 @@ lucide:
 	@cp tmp/lucide/* sets/lucide
 	@node -e 'fs.writeFileSync("sets/lucide/index.txt", fs.readdirSync("sets/lucide").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/lucide/index.json", JSON.stringify(fs.readFileSync("sets/lucide/index.txt", "utf8").split("\n"), null, 2))'
+
+.PHONY: lucide_v1
+lucide_v1:
+	@npx rimraf tmp/lucide_v1 sets/lucide_v1
+	@npx mkdirp tmp/lucide_v1 sets/lucide_v1
+	@find node_modules/lucide_v1/icons -maxdepth 1 -type f | xargs -I {} cp {} tmp/lucide_v1
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/lucide_v1/*.svg
+	@cp tmp/lucide_v1/* sets/lucide_v1
+	@node -e 'fs.writeFileSync("sets/lucide_v1/index.txt", fs.readdirSync("sets/lucide_v1").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/lucide_v1/index.json", JSON.stringify(fs.readFileSync("sets/lucide_v1/index.txt", "utf8").split("\n"), null, 2))'
 
 .PHONY: lineicons
 lineicons:

@@ -36,6 +36,11 @@ export const atlaskit: Story = {
   render: () => <PreviewSet set={'atlaskit'} icons={require('../../sets/atlaskit')} />,
 };
 
+export const atlaskit_34: Story = {
+  name: 'atlaskit_34',
+  render: () => <PreviewSet set={'atlaskit_34'} icons={require('../../sets/atlaskit_34')} />,
+};
+
 export const auth0: Story = {
   name: 'auth0',
   render: () => <PreviewSet set={'auth0'} icons={require('../../sets/auth0')} />,
@@ -89,6 +94,11 @@ export const lineicons: Story = {
 export const lucide: Story = {
   name: 'lucide',
   render: () => <PreviewSet set={'lucide'} icons={require('../../sets/lucide')} />,
+};
+
+export const lucide_v1: Story = {
+  name: 'lucide_v1',
+  render: () => <PreviewSet set={'lucide_v1'} icons={require('../../sets/lucide_v1')} />,
 };
 
 export const pluralsight: Story = {

@@ -2,6 +2,7 @@ ant_fill
 ant_outline
 ant_twotone
 atlaskit
+atlaskit_34
 auth0
 bootstrap
 elastic
@@ -13,6 +14,7 @@ ibm_16
 ibm_32
 lineicons
 lucide
+lucide_v1
 pluralsight
 pluralsight_illustrations
 radix
