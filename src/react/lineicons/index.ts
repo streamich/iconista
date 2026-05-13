@@ -433,7 +433,7 @@ export {default as QuestionMarkCircle} from './question-mark-circle';
 export {default as QuestionMark} from './question-mark';
 export {default as Quora} from './quora';
 export {default as Radis} from './radis';
-export {default as React} from './react';
+export {default as SvgReact} from './react';
 export {default as Reddit} from './reddit';
 export {default as RefreshCircle1Clockwise} from './refresh-circle-1-clockwise';
 export {default as RefreshDollar1} from './refresh-dollar-1';

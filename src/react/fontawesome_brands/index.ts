@@ -294,7 +294,7 @@ export {default as Quora} from './quora';
 export {default as RProject} from './r-project';
 export {default as RaspberryPi} from './raspberry-pi';
 export {default as Ravelry} from './ravelry';
-export {default as React} from './react';
+export {default as SvgReact} from './react';
 export {default as Reacteurope} from './reacteurope';
 export {default as Readme} from './readme';
 export {default as Rebel} from './rebel';

@@ -2306,7 +2306,7 @@ export {default as Raylib} from './raylib';
 export {default as Razer} from './razer';
 export {default as Razorpay} from './razorpay';
 export {default as Rclone} from './rclone';
-export {default as React} from './react';
+export {default as SvgReact} from './react';
 export {default as Reactbootstrap} from './reactbootstrap';
 export {default as Reacthookform} from './reacthookform';
 export {default as Reactiveresume} from './reactiveresume';

@@ -99,7 +99,6 @@ export {default as Eye} from './eye';
 export {default as EyeClosed} from './eye_closed';
 export {default as FaceNeutral} from './faceNeutral';
 export {default as FaceHappy} from './face_happy';
-export {default as FaceNeutral} from './face_neutral';
 export {default as FaceSad} from './face_sad';
 export {default as Filter} from './filter';
 export {default as FolderClosed} from './folder_closed';

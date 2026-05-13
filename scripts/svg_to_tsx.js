@@ -101,14 +101,25 @@ function insertPropsSpread(svg) {
 }
 
 /**
+ * Identifiers that conflict with the generated file's own imports and must be
+ * prefixed with 'Svg' to avoid a compile-time name clash.
+ */
+const RESERVED_NAMES = new Set(['React', 'Component', 'Fragment', 'createElement']);
+
+/**
  * Derive a valid PascalCase React component name from an icon filename (no extension).
+ * Examples:
+ *   account     -> Account
+ *   arrow-down  -> ArrowDown
+ *   1f004       -> Svg1f004   (starts with digit -> prefixed)
+ *   react       -> SvgReact   (conflicts with the React import alias)
  */
 function toComponentName(iconName) {
   const pascal = iconName
     .split(/[-_.\s]+/)
     .map((part) => (part ? part[0].toUpperCase() + part.slice(1) : ''))
     .join('');
-  return /^\d/.test(pascal) ? 'Svg' + pascal : pascal;
+  return /^\d/.test(pascal) || RESERVED_NAMES.has(pascal) ? 'Svg' + pascal : pascal;
 }
 
 /**
