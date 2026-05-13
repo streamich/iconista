@@ -95,4 +95,6 @@ esm/
 
 *storybook.log
 
+site/browser-test-screenshots/
+site/package-lock.json
 /site/tsconfig.tsbuildinfo

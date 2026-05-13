@@ -280,3 +280,98 @@ build_types:
 	@npx rimraf src/types.ts
 	@node scripts/build_types.js
 	@node scripts/build_stories.js
+
+.PHONY: react_ant_fill
+react_ant_fill:
+	@node scripts/build_react_icons.js ant_fill
+
+.PHONY: react_ant_outline
+react_ant_outline:
+	@node scripts/build_react_icons.js ant_outline
+
+.PHONY: react_ant_twotone
+react_ant_twotone:
+	@node scripts/build_react_icons.js ant_twotone
+
+.PHONY: react_atlaskit
+react_atlaskit:
+	@node scripts/build_react_icons.js atlaskit
+
+.PHONY: react_auth0
+react_auth0:
+	@node scripts/build_react_icons.js auth0
+
+.PHONY: react_bootstrap
+react_bootstrap:
+	@node scripts/build_react_icons.js bootstrap
+
+.PHONY: react_elastic
+react_elastic:
+	@node scripts/build_react_icons.js elastic
+
+.PHONY: react_emojione_v2
+react_emojione_v2:
+	@node scripts/build_react_icons.js emojione_v2
+
+.PHONY: react_fontawesome_brands
+react_fontawesome_brands:
+	@node scripts/build_react_icons.js fontawesome_brands
+
+.PHONY: react_fontawesome_regular
+react_fontawesome_regular:
+	@node scripts/build_react_icons.js fontawesome_regular
+
+.PHONY: react_fontawesome_solid
+react_fontawesome_solid:
+	@node scripts/build_react_icons.js fontawesome_solid
+
+.PHONY: react_ibm_16
+react_ibm_16:
+	@node scripts/build_react_icons.js ibm_16
+
+.PHONY: react_ibm_32
+react_ibm_32:
+	@node scripts/build_react_icons.js ibm_32
+
+.PHONY: react_lineicons
+react_lineicons:
+	@node scripts/build_react_icons.js lineicons
+
+.PHONY: react_lucide
+react_lucide:
+	@node scripts/build_react_icons.js lucide
+
+.PHONY: react_pluralsight
+react_pluralsight:
+	@node scripts/build_react_icons.js pluralsight
+
+.PHONY: react_pluralsight_illustrations
+react_pluralsight_illustrations:
+	@node scripts/build_react_icons.js pluralsight_illustrations
+
+.PHONY: react_radix
+react_radix:
+	@node scripts/build_react_icons.js radix
+
+.PHONY: react_simple
+react_simple:
+	@node scripts/build_react_icons.js simple
+
+.PHONY: react_tabler
+react_tabler:
+	@node scripts/build_react_icons.js tabler
+
+.PHONY: react_tabler_filled
+react_tabler_filled:
+	@node scripts/build_react_icons.js tabler_filled
+
+.PHONY: react_vscode
+react_vscode:
+	@node scripts/build_react_icons.js vscode
+
+.PHONY: react_vscode_dark
+react_vscode_dark:
+	@node scripts/build_react_icons.js vscode_dark
+
+.PHONY: react_icons
+react_icons: react_ant_fill react_ant_outline react_ant_twotone react_atlaskit react_auth0 react_bootstrap react_elastic react_emojione_v2 react_fontawesome_brands react_fontawesome_regular react_fontawesome_solid react_ibm_16 react_ibm_32 react_lineicons react_lucide react_pluralsight react_pluralsight_illustrations react_radix react_simple react_tabler react_tabler_filled react_vscode react_vscode_dark
