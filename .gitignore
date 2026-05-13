@@ -94,3 +94,6 @@ esm/
 /storybook-static
 
 *storybook.log
+
+site/browser-test-screenshots/
+site/package-lock.json
