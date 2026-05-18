@@ -101,6 +101,11 @@ export const lucide_v1: Story = {
   render: () => <PreviewSet set={'lucide_v1'} icons={require('../../sets/lucide_v1')} />,
 };
 
+export const phosphor: Story = {
+  name: 'phosphor',
+  render: () => <PreviewSet set={'phosphor'} icons={require('../../sets/phosphor')} />,
+};
+
 export const pluralsight: Story = {
   name: 'pluralsight',
   render: () => <PreviewSet set={'pluralsight'} icons={require('../../sets/pluralsight')} />,

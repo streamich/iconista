@@ -269,6 +269,22 @@ bootstrap:
 	@node -e 'fs.writeFileSync("sets/bootstrap/index.txt", fs.readdirSync("sets/bootstrap").map(n => path.parse(n).name).join("\n"))'
 	@node -e 'fs.writeFileSync("sets/bootstrap/index.json", JSON.stringify(fs.readFileSync("sets/bootstrap/index.txt", "utf8").split("\n"), null, 2))'
 
+.PHONY: phosphor
+phosphor:
+	@npx rimraf tmp/phosphor sets/phosphor
+	@npx mkdirp tmp/phosphor sets/phosphor
+	@find node_modules/@phosphor-icons/core/assets/regular -maxdepth 1 -type f -name '*.svg' | xargs -I {} cp {} tmp/phosphor
+	@for v in bold duotone fill light thin; do \
+		find node_modules/@phosphor-icons/core/assets/$$v -maxdepth 1 -type f -name '*.svg' | while read file; do \
+			base=$$(basename "$$file" .svg); \
+			cp "$$file" "tmp/phosphor/$${base%-$$v}__$$v.svg"; \
+		done; \
+	done
+	@npx svgo "--disable=removeViewBox" "--enable=removeDimensions" tmp/phosphor/*.svg
+	@cp tmp/phosphor/* sets/phosphor
+	@node -e 'fs.writeFileSync("sets/phosphor/index.txt", fs.readdirSync("sets/phosphor").map(n => path.parse(n).name).join("\n"))'
+	@node -e 'fs.writeFileSync("sets/phosphor/index.json", JSON.stringify(fs.readFileSync("sets/phosphor/index.txt", "utf8").split("\n"), null, 2))'
+
 .PHONY: build_set_index
 build_set_index:
 	@npx rimraf sets/index.*
@@ -349,6 +365,10 @@ react_pluralsight:
 react_pluralsight_illustrations:
 	@node scripts/build_react_icons.js pluralsight_illustrations
 
+.PHONY: react_phosphor
+react_phosphor:
+	@node scripts/build_react_icons.js phosphor
+
 .PHONY: react_radix
 react_radix:
 	@node scripts/build_react_icons.js radix
@@ -374,4 +394,4 @@ react_vscode_dark:
 	@node scripts/build_react_icons.js vscode_dark
 
 .PHONY: react_icons
-react_icons: react_ant_fill react_ant_outline react_ant_twotone react_atlaskit react_auth0 react_bootstrap react_elastic react_emojione_v2 react_fontawesome_brands react_fontawesome_regular react_fontawesome_solid react_ibm_16 react_ibm_32 react_lineicons react_lucide react_pluralsight react_pluralsight_illustrations react_radix react_simple react_tabler react_tabler_filled react_vscode react_vscode_dark
+react_icons: react_ant_fill react_ant_outline react_ant_twotone react_atlaskit react_auth0 react_bootstrap react_elastic react_emojione_v2 react_fontawesome_brands react_fontawesome_regular react_fontawesome_solid react_ibm_16 react_ibm_32 react_lineicons react_lucide react_pluralsight react_pluralsight_illustrations react_phosphor react_radix react_simple react_tabler react_tabler_filled react_vscode react_vscode_dark
