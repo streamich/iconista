@@ -15,6 +15,7 @@ ibm_32
 lineicons
 lucide
 lucide_v1
+phosphor
 pluralsight
 pluralsight_illustrations
 radix

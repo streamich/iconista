@@ -83,4 +83,5 @@ licenses:
 - `simple` icon set is under [CC0 1.0 Universal license](https://github.com/simple-icons/simple-icons/blob/ac87321562995f2e55272ac06b5e68308edb6c0b/LICENSE.md).
 - `vscode` and `vscode_dark` icon sets are under [CC Attribution 4.0 International](https://github.com/microsoft/vscode-icons/blob/2ca0f3225c1ecd16537107f60f109317fcfc3eb0/LICENSE).
 - `bootstrap` icon set is under [MIT license](https://github.com/twbs/icons/blob/dfc7bdc1bf536ac631ec12c8592e4d7bcd1d0ee9/LICENSE).
+- `phosphor` icon set is under [MIT license by Phosphor Icons](https://github.com/phosphor-icons/phosphor-core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/LICENSE). The set bundles all weights: regular icons keep their plain name, other weights are postfixed (`__bold`, `__duotone`, `__fill`, `__light`, `__thin`).
 - This project is under [Unlicense](LICENSE) license &mdash; public domain.
