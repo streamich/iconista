@@ -13,9 +13,7 @@
   "license": "Unlicense",
   "main": "lib/index.js",
   "files": [
-    "lib/",
-    "esm/",
-    "sets/"
+    "lib/"
   ],
   "scripts": {
     "start": "yarn storybook",
