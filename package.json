@@ -63,7 +63,7 @@
     "lucide-static": "^0.456.0",
     "lucide_v1": "npm:lucide-static@1.11.0",
     "mkdirp": "^3.0.1",
-    "notistack": "^0.5.1",
+    "notistack": "^0.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rimraf": "^6.0.1",
